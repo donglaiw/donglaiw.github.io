@@ -98,6 +98,9 @@ blockquote cite{display:block;margin:5px 0 0;}
 #access .current_page_item ul li a, #access .current_page_item ul li a:hover{background:#eaeaea;color:#333;}
 
 li .categories,li .linkcat,li .pagenav{list-style:none;margin:0;padding:0;}
+li{
+        margin-top: 5px;
+}
 
 .yui-nav{margin-bottom:-1px;}
 .yui-navset .yui-nav a:hover{background-color:#eee;color:#333;}

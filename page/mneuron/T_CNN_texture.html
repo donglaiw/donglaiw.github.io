@@ -1,0 +1,23 @@
+<script>
+
+
+nn=[1,2,5,9,11,13];
+nn2=['conv1','relu1','conv2','conv3','conv4','conv5'];
+
+var out=''
+    
+out+='souce image: <img src="CNN_artist/images/texture/g1_0747.o.jpg" /></td>'
+out+='<table border=1>'
+    
+out+='<tr><td>layer</td>'
+for(var i=0;i<nn.length;i++){
+out+='<td>'+nn2[i]+'</td>'
+}
+out+='</tr>'
+    out+='<tr><td>texture</td>'
+for(var i=0;i<nn.length;i++){
+    out+='<td><img src="CNN_artist/result/texture/f4_'+nn[i]+'_g1_0747.o.jpg"/></td>'
+}
+out+='</table>'
+document.write(out)
+</script>

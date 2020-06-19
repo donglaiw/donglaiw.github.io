@@ -1,0 +1,97 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Learning and Using the Arrow of Time</title>
+
+<!-- Meta tags for search engines to crawl -->
+<meta name="robots" content="index,follow">
+<meta name="description" content="We seek to understand the arrow of time in videos--what makes videos look like playing forwards or backwards?  Can we visualize the cues? Can the arrow of time be a supervisory signal useful for activity analysis? To this end, we apply a learning-based approach to a large set of videos. To learn the arrow of time efficiently and reliably, we design a ConvNet suitable for extended temporal footprints and for the class activation visualization, and study the effect of artificial cues, such as inematographic conventions, on learning. Our trained model achieves the state-of-the-art performance on two large-scale real-world video datasets.  Through cluster analysis, we examine the learned visual cues, showing when and where they occur. Lastly, we use the trained ConvNet for two applications: self-supervision for action recognition, and video forensics -- determining whether Hollywood film clips have been deliberately reversed in time as special effects.">
+<meta name="keywords" content="arrow of time; unsupervised learning; deep learning;">
+
+<!-- Fonts and stuff -->
+<link href="./aot/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./aot/project.css" media="screen">
+<link rel="stylesheet" type="text/css" media="screen" href="./aot/iconize.css">
+<script async="" src="./aot/prettify.js"></script>
+<style>
+.highlight {
+  padding: 1.5rem;
+  margin-right: 0;
+  margin-left: 0;
+  background: gainsboro;
+}
+
+</style>
+
+</head>
+
+<body>
+  <div id="content">
+    <div id="content-inner">
+      
+      <div class="section head">
+	<h1>Learning and Using the Arrow of Time</h1>
+
+	<div class="authors">
+	  <a href="https://people.csail.mit.edu/donglai/">Donglai Wei</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="http://www-bcf.usc.edu/~limjj/">Joseph Lim</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="https://www.robots.ox.ac.uk/~az/">Andrew Zisserman</a><sup>3,5</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="https://billf.mit.edu/">William T. Freeman</a><sup>4,5</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</div>
+
+	<div class="affiliations">
+	  1. Harvard University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  2. University of Southern California&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  3. University of Oxford&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+	  4. Massachusessets Institute of Technology&nbsp;&nbsp;&nbsp;&nbsp;
+	  5. Google Research
+	</div>
+
+	<div class="venue">Conference on Computer Vision and Pattern Recognition (<a href="http://cvpr2018.thecvf.com/" target="_blank">CVPR</a>) 2018 </div>
+      
+      </div>
+      <center>
+ [<a href="pdf/final_cvpr18.pdf">PDF</a>]
+[<a href="pdf/arxiv_0618.pdf">PDF (extended)</a>]
+[<a href="https://github.com/donglaiw/AoT_TCAM">Torch Code</a>]
+[<a href="https://github.com/donglaiw/AoT_Dataset">Dataset and Pre-Process Code</a>]
+      </center>
+<br/>    
+      <center><img src="./aot/aot_teaser.png" border="0" width="80%"></center>
+
+<div class="section abstract">
+	<h2>Abstract</h2>
+	<br>
+	<p>	&nbsp;&nbsp;&nbsp;&nbsp;We seek to understand the arrow of time in videos--what makes videos look like playing forwards or backwards?  Can we visualize the cues? Can the arrow of time be a supervisory signal useful for activity analysis? To this end, we apply a learning-based approach to a large set of videos. 
+<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;To learn the arrow of time efficiently and reliably, we design a ConvNet suitable for extended temporal footprints and for the class activation visualization, and study the effect of artificial cues, such as inematographic conventions, on learning. Our trained model achieves the state-of-the-art performance on two large-scale real-world video datasets.  Through cluster analysis, we examine the learned visual cues, showing when and where they occur. Lastly, we use the trained ConvNet for two applications: self-supervision for action recognition, and video forensics -- determining whether Hollywood film clips have been deliberately reversed in time as special effects.
+    </p>
+      </div>
+
+<div class="section demo">
+	<h2>Paper Video</h2>
+	<br>
+	<center>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/1zfZhXkOzCw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	
+	    </center>
+    </div>
+<br>
+<div class="section materials">
+<h2>Citation</h2>
+<p>Bibilographic information for this work:</p>
+
+<pre class="highlight">
+@inproceedings{wei2018learning,
+  title={Learning and Using the Arrow of Time},
+  author={Wei, Donglai and Lim, Joseph J and Zisserman, Andrew and Freeman, William T},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={8052--8060},
+  year={2018}
+}
+</pre>
+<h2>Acknowledgement</h2>
+<p>
+This work was supported by NSF Grant 1212849 (Reconstructive Recognition), and by the EPSRC Programme Grant Seebibyte EP/M013774/1</p>
+</div>
+
+</div></div></body></html>

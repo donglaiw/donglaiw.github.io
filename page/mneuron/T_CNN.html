@@ -1,0 +1,30 @@
+<script>
+    var out =''
+    out += '<table border=1>'
+    out += '<tr><td>Input Content</td>'
+    out += '<td><img height=300 src="CNN_artist/images/bill.jpg" /></td></tr>'
+out += '<tr><td colspan=7>1. CNN-artist</td></tr>'
+    out += '<tr><td>Input Style</td>'
+    for(var i=1;i<=6;i++){
+        out+='<td><img height=300 src="CNN_artist/images/man_sketch'+i+'.jpg" /></td>'
+    }
+    out += '</tr><tr><td>Output</td>'
+    for(var i=1;i<=6;i++){
+        out+='<td><img height=300 src="CNN_artist/result/bill/sketch_'+i+'.png" /></td>'
+    }
+    out += '</tr>'
+out += '<tr><td colsapn=7>2. Online Pencil Sketch Software</td></tr>'
+    nn_soft=["funny_pho","photofunia"];
+    ll_soft=["funny.pho.to/graphite-pencil-sketch","photofunia.com/effects/pencil_drawing/"];
+    out += '<tr><td></td>'
+    for(var i=0;i<nn_soft.length;i++){
+        out+='<td><a href="http://www.'+ll_soft[i]+'">'+nn_soft[i]+'</a></td>'
+    }
+    out += '</tr><tr><td>Output</td>'
+    for(var i=0;i<nn_soft.length;i++){
+        out+='<td><img height=300 src="CNN_artist/result/bill/sketch_'+nn_soft[i]+'.jpg" /></td>'
+    }
+    out += '</tr>'
+    out += '</table>'
+document.write(out)
+</script>

@@ -1,0 +1,102 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MitoEM Dataset: Large-scale 3D Mitochondria Instance Segmentation from EM Images</title>
+
+<!-- Meta tags for search engines to crawl -->
+<meta name="robots" content="index,follow">
+<meta name="description" content="We seek to understand the arrow of time in videos--what makes videos look like playing forwards or backwards?  Can we visualize the cues? Can the arrow of time be a supervisory signal useful for activity analysis? To this end, we apply a learning-based approach to a large set of videos. To learn the arrow of time efficiently and reliably, we design a ConvNet suitable for extended temporal footprints and for the class activation visualization, and study the effect of artificial cues, such as inematographic conventions, on learning. Our trained model achieves the state-of-the-art performance on two large-scale real-world video datasets.  Through cluster analysis, we examine the learned visual cues, showing when and where they occur. Lastly, we use the trained ConvNet for two applications: self-supervision for action recognition, and video forensics -- determining whether Hollywood film clips have been deliberately reversed in time as special effects.">
+<meta name="keywords" content="arrow of time; unsupervised learning; deep learning;">
+
+<!-- Fonts and stuff -->
+<link href="./src/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./src/project.css" media="screen">
+<link rel="stylesheet" type="text/css" media="screen" href="./src/iconize.css">
+<script async="" src="./src/prettify.js"></script>
+<style>
+.highlight {
+  padding: 1.5rem;
+  margin-right: 0;
+  margin-left: 0;  
+}
+
+</style>
+
+</head>
+
+<body>
+  <div id="content">
+    <div id="content-inner">
+      
+      <div class="section head">
+	<h1>MitoEM Dataset: Large-scale 3D Mitochondria Instance Segmentation from EM Images</h1>
+
+	<div class="authors">
+	  <a href="https://people.csail.mit.edu/donglai/">Donglai Wei</a><sup>1</sup>&nbsp;
+	  Zudi Lin<sup>1</sup>&nbsp;	  
+	  Nils Wendt<sup>2*</sup>&nbsp;
+	  Xingyu Liu<sup>3*</sup>&nbsp;
+	  Aarush Gupta<sup>4*</sup>&nbsp;
+	  Daniel Barranco<sup>5</sup>&nbsp;
+	  Wenjie Yin<sup>1*</sup>&nbsp; 
+	  Xin Huang<sup>6*</sup>&nbsp; 	  
+	  <a href="https://wdjang.github.io/">Won-Dong Jang</a><sup>1</sup>&nbsp;
+	  Xueying Wang<sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="https://sites.google.com/site/iargandacarreras/"> Ignacio Arganda-Carreras<sup>7</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="https://lichtmanlab.fas.harvard.edu/people/jeff-lichtman">Jeff W. Lichtman<sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="https://vcg.seas.harvard.edu/people/hanspeter-pfister">Hanspeter Pfister</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</div>
+
+	<div class="affiliations">
+	  <sup>1</sup>Harvard University&nbsp;  
+	  <sup>2</sup>Technical University of Munich&nbsp;
+	  <sup>3</sup>Shanghai Jiao Tong University&nbsp;
+	  <sup>4</sup>Indian Institute of Technology Roorkee<br/>
+	  <sup>5</sup>Donostia International Physics Center&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <sup>6</sup>Northeastern University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <sup>7</sup>Basque Country University
+	</div>
+
+	<div class="venue">International Conference on Medical Image Computing and Computer Assisted Intervention (<a href="https://www.miccai2020.org/" target="_blank">MICCAI</a>) 2020 </div>
+	<div>* Works are done as interns at Harvard University</div>
+
+      
+      </div>
+      <center>
+ [<a href="pdf/final_cvpr18.pdf">PDF</a>]
+[<a href="https://github.com/donglaiw/AoT_TCAM">PyTorch Code</a>]
+[<a href="https://github.com/donglaiw/AoT_Dataset">Dataset</a>]
+      </center>
+<br/>    
+      <center><img src="./src/mitoEM_teaser.png" border="0" width="80%"></center>
+
+<div class="section abstract">
+	<h2>Abstract</h2>
+	<br>
+	<p>	&nbsp;&nbsp;&nbsp;&nbsp;Serial electron microscopy allows identification of intracellular organelles such as mitochondria, which provides novel insights for both clinical and scientific studies. However, the mitochondria reconstruction benchmark only contains around <i>100</i> instances that are well-separated and exhibit simple morphologies. Therefore, existing automatic methods that have achieved almost human-level performance on the small dataset usually fail to produce preferred results due to object diversity in appearance and morphologies. 
+
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	To enable the development of robust models for large-scale biomedical analysis, we introduce <b>MitoEM</b>, a 3D mitochondria instance segmentation dataset consisting of two 30um cubic volumes from human and rat cortices respectively, which are <b>3,600x</b> larger than the previous benchmark dataset. 	
+	Our new dataset posts new challenges for existing state-of-the-art segmentation approaches as they consistently fail to generate object masks with quality on par with expert annotators. With approximately 40k mitochondria in our new dataset, we provide in-depth analysis of the dataset properties, as well as the performance of different combinations of deep learning models and post-processing methods. The MitoEM dataset and our comprehensive analysis will enable further researches in large-scale instance segmentation and a better understanding of mammalian brains.
+    </p>
+      </div>
+
+<br>
+<div class="section materials">
+<h2>Dataset Analysis</h2>
+	<center><img src="./src/mitoEM_dataset.png" border="0" width="80%"></center>
+
+<h2>Citation</h2>
+<pre class="highlight">
+@inproceedings{wei2020mitoem,
+  title={MitoEM Dataset: Large-scale 3D Mitochondria Instance Segmentation from EM Images},
+  author={D. Wei, Z. Lin, D. Barranco, N. Wendt, X. Liu, W. Yin, X. Huang, A. Gupta, W. Jang, X. Wang, <br/> I. Arganda-Carreras, J. Lichtman, H. Pfister},
+  booktitle={International Conference on Medical Image Computing and Computer Assisted Intervention},
+  year={2020}
+}
+</pre>
+<h2>Acknowledgement</h2>
+<p>
+This work was supported by NSF Grant IIS-1835231.</p>
+</div>
+
+</div></div></body></html>

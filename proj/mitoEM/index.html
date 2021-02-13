@@ -4,8 +4,8 @@
 
 <!-- Meta tags for search engines to crawl -->
 <meta name="robots" content="index,follow">
-<meta name="description" content="We seek to understand the arrow of time in videos--what makes videos look like playing forwards or backwards?  Can we visualize the cues? Can the arrow of time be a supervisory signal useful for activity analysis? To this end, we apply a learning-based approach to a large set of videos. To learn the arrow of time efficiently and reliably, we design a ConvNet suitable for extended temporal footprints and for the class activation visualization, and study the effect of artificial cues, such as inematographic conventions, on learning. Our trained model achieves the state-of-the-art performance on two large-scale real-world video datasets.  Through cluster analysis, we examine the learned visual cues, showing when and where they occur. Lastly, we use the trained ConvNet for two applications: self-supervision for action recognition, and video forensics -- determining whether Hollywood film clips have been deliberately reversed in time as special effects.">
-<meta name="keywords" content="arrow of time; unsupervised learning; deep learning;">
+<meta name="description" content="">
+<meta name="keywords" content="mitochondira; instance segmentation;">
 
 <!-- Fonts and stuff -->
 <link href="./src/css" rel="stylesheet" type="text/css">
@@ -60,7 +60,7 @@
       <center>
       <font size=4>
           <a href="https://www.miccai2020.org/">MICCAI 2020</a> / <a href="https://mitoem.grand-challenge.org/">ISBI 2021 Challenge</a><br/><br/>
-        [<a href="../../paper/2020_miccai_mitoEM.pdf">Paper</a>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          [<a href="../../paper/2020_miccai_mitoEM.pdf">Paper</a> <a href="../../paper/2020_miccai_mitoEM_update.pdf">(Updated Results)</a>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         [<a href="https://zudi-lin.github.io/pytorch_connectomics/build/html/tutorials/mito.html#instance-segmentation">Code</a>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         [<a href="https://www.dropbox.com/sh/p5xn9e4gderjtm6/AABFPdclv97SWXT4n90Wn9Sba?dl=0">Dataset</a>]
       </font>
@@ -68,31 +68,86 @@
 <br/>    
 <br/>    
 <br/>    
-      <center><img src="./src/mitoEM_teaser.png" border="0" width="80%"></center>
+      <center><img src="./src/mitoEM_teaser.png" border="0" width="60%"></center>
 
 <div class="section abstract">
 	<h2>Abstract</h2>
 	<br>
 	<p>	&nbsp;&nbsp;&nbsp;&nbsp;Electron microscopy (EM) allows the identification of intracellular organelles such as mitochondria, providing insights for clinical and scientific studies. However, public mitochondria segmentation datasets only contain hundreds of instances with simple shapes. It is unclear if existing methods achieving human-level accuracy on these small datasets are robust in practice. To this end, we introduce the <b> MitoEM</b> dataset, a 3D mitochondria instance segmentation dataset with two 30um cubic volumes from human and rat cortices respectively, <b>3,600x</b> larger than previous benchmarks. With around 40K instances, we find a great diversity of mitochondria in terms of shape and density. For evaluation, we tailor the implementation of the average precision (AP) metric for 3D data with a <b>45x</b> speedup. On MitoEM, we find existing instance segmentation methods often fail to correctly segment mitochondria with complex shapes or close contacts with other instances. Thus, our MitoEM dataset poses new challenges to the field. 
     </p>
-      </div>
+  </div>
 
 <br>
 <div class="section materials">
-<h2>Dataset Analysis</h2>
+<h2>Dataset</h2>
 	<center><img src="./src/mitoEM_dataset.png" border="0" width="80%"></center>
     <p>We plot the length versus volume of mitochondria instances for both volumes, where the length of the mitochondria is approximated by the number of voxels in its 3D skeleton (Left).
     There is a strong linear correlation between the volume and length mitochondria in both volumes, which is the average thickness of the instance. While the MitoEM-H has more small instances, the MitoEM-R has more large instances with complex morphologies.
     We sample mitochondria of different length along the regression line and find instances share similar shapes to MOAS in both volumes (Right).
     </p>
+  </div>
+<br>
 
+<div class="section materials">
+<h2>Updated Baseline Results</h2>
+    <p> After the camera ready deadline, we did another round of annotation cleaning and improved the training of our 3D model. Please cite and compare with the following numbers, if you plan to use this dataset. [<a href="../../paper/2020_miccai_mitoEM_update.pdf">Descriptions</a>] [<a href="https://mitoem.grand-challenge.org/evaluation/challenge/leaderboard/">Leaderboard Results</a>]
+    </p>
+    <center>
+    <table>
+        <tr>
+              <th rowspan=2>Method</th>
+              <th colspan=4>MitoEM-H</th>
+              <th colspan=4>MitoEM-R</th>
+        </tr>
+        <tr align=center>
+            <td>Small</td>
+            <td>Med</td>
+            <td>Large</td>
+            <td>All</td>
+
+            <td>Small</td>
+            <td>Med</td>
+            <td>Large</td>
+            <td>All</td>
+        </tr>
+        <tr>
+            <td>U2D-B + CC</td>
+            <td>0.272</td>
+            <td>0.636</td>
+            <td>0.493</td>
+            <td>0.534</td>
+            <td>0.133</td>
+            <td>0.523</td>
+            <td>0.289</td>
+            <td>0.330</td>
+        </tr>
+        <tr>
+            <td>U3D-B + MW</td>
+            <td>0.426</td>
+            <td>0.838</td>
+            <td>0.798</td>
+            <td>0.804</td>
+            <td>0.311</td>
+            <td>0.845</td>
+            <td>0.803</td>
+            <td>0.816</td>
+        </tr>
+    </table>
+    </center>
+</div>
+
+<br>
+<div class="section materials">
 <h2>Citation</h2>
 <pre class="highlight">
 @inproceedings{wei2020mitoem,
-  title={MitoEM Dataset: Large-scale 3D Mitochondria Instance Segmentation from EM Images},
-  author={D. Wei, Z. Lin, D. Barranco, N. Wendt, X. Liu, W. Yin, X. Huang, A. Gupta,<br/> W. Jang, X. Wang,  I. Arganda-Carreras, J. Lichtman, H. Pfister},
-  booktitle={International Conference on Medical Image Computing and Computer Assisted Intervention},
-  year={2020}
+  title={MitoEM Dataset: Large-Scale 3D Mitochondria Instance Segmentation from EM Images},
+  author={Wei, Donglai and Lin, Zudi and Franco-Barranco, Daniel and Wendt, Nils and Liu, Xingyu and 
+  Yin, Wenjie and Huang, Xin and Gupta, Aarush and Jang, Won-Dong and Wang, Xueying and others},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={66--76},
+  year={2020},
+  organization={Springer}
 }
 </pre>
 <h2>Acknowledgement</h2>

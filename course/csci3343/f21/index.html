@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>CSCI 3343: Fall 2021</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./src/main.css">
+	<script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script></head>
+	<body data-new-gr-c-s-check-loaded="14.1022.0" data-gr-ext-installed="">
+    <style>
+        
+  a {
+      color: #535353;
+  }
+  a.nounderline { 
+      text-decoration: none;
+      decoration: none;
+		  border-bottom: none; 
+  }
+    </style>
+    
+      <div id="wrapper">
+        <header id="header" class="alt" style="width: 100%">
+          <div class="bgimg" style="height: 160px; background: #800000">
+            <div style="height: 30px; width: 100%"></div>
+            <h1><font size="+5">CSCI 3343: Computer Vision</font><div style="height:10px"></div>
+              </h1><h2>
+                <font size="+2">
+                  Instructor:&nbsp;&nbsp;<a href="https://donglaiw.github.io/" class="nounderline">Donglai Wei</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  Fall 2021
+                </font>
+              </h2>
+          </div>
+				</header>
+      
+        <center>
+          <div style="background: #EEEEEE; height: 7px"></div>
+        </center>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>							
+							<li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/#schedule" class="inheritactive">Schedule</a></li>
+              <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/#staff" class="inheritcolor">Staff</a></li>
+              <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/#syllabus" class="inheritcolor">Course info</a></li> <b>·</b>
+              <li><a href="https://piazza.com/umich/fall2020/eecs442" class="inheritcolor">Piazza</a></li>
+              <li><a href="https://umich.instructure.com/courses/389326" class="inheritcolor">Canvas</a></li>
+              <li><a href="https://www.gradescope.com/courses/155852" class="inheritcolor">Gradescope</a></li>
+              <li><a href="https://umich.instructure.com/courses/389326/pages/class-zoom-link">Zoom</a></li>
+						</ul>
+					</nav>
+
+
+          
+				<!-- Main -->
+					<div id="main">
+            <section id="note" class="main special">
+              <br>
+            <section id="schedule" class="main special">
+              <center>
+                <header class="major">
+                  <h2>Schedule</h2>
+                </header>
+                  <div class="table-wrapper" style="width:90%">
+                    <font style="font-size: 16px">
+                        <table class="alt">
+												<tbody>
+                          </tbody><colgroup><col width="8%">
+                          <col width="12%">
+                          <col width="25%">
+                          </colgroup><thead>
+                            <tr>
+                              <th style="text-align:center">Lecture</th>
+                              <th style="text-align:center">Date</th>
+                              <th style="text-align:center">Topic</th>
+                              <th style="text-align:center">Materials</th>
+                              <th style="text-align:center">Assignments</th>
+                            </tr>
+                          </thead>
+                          <style>
+                            ul.materials {
+                                padding-left: 15px;
+                            }
+                            div.subtopic {
+                                font-family: HelveticaNeue-Light;
+                                font-weight: 200;
+                            }
+                            td.topic {
+                                font-family: HelveticaNeue;
+                                font-weight: 600;
+                            }
+                            
+                          </style>
+
+    <!-- Start schedule -->
+    <tbody>
+      <tr class="alternate">
+        <td>Lec. 1</td>
+        <td>Mon, Aug. 31</td>
+        <td class="topic">A simple vision system
+          <div class="subtopic">About the course
+            <br>Cameras
+            <br>Simple edge detection</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec1-intro.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/3eVVF5jLrnFIRdL_7AKOBZwPOb_Vaaa81iFL-fBYyEe6bJSIqOKSIRWxNU3KmIAA?startTime=1598900205000">Recording</a></li>
+            <li><a href="http://6.869.csail.mit.edu/fa19/lectures/chapter1.pdf">Torralba, Freeman, and Isola: A Simple Visual System (optional)</a></li>
+          </ul>
+        </td>
+        <td><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps1.pdf">ps1 out (filtering)</a></td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 2</td>
+        <td>Wed, Sep. 2 </td>
+        <td class="topic">Image filters
+          <div class="subtopic">Convolution
+            <br>Gradient filters
+            <br>Blurring</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec2-filtering.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/-6Rg2H6q2gQA2Q4iT3jKDCGkx9P-dGLlET7KUiwN2q5adRv-ZFWT37piPn2daNg.P-KbmavxxolwlFRv?startTime=1599073319000">Recording</a></li>
+            <li><a href="http://6.869.csail.mit.edu/fa19/lectures/notes_lecture4.pdf">Torralba, Freeman, and Isola: Signal processing</a></li>
+            <li><a href="http://szeliski.org/Book/">Szeliski Chapter 3.2, page 111</a></li>
+          </ul>
+        </td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Sec. 1</td>
+        <td>Fri, Sep. 4 </td>
+        <td class="topic">Linear algebra
+          <div class="subtopic"></div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/disc/Linear-Algebra-Tutorial-I.pdf">Slides</a></li>
+            <li><a href="https://umich.instructure.com/courses/389326/files">Recording</a></li>
+            <li><a href="https://colab.research.google.com/drive/1uqO9yDmUL19z6el-vmz6j5eVUK1jfIXa?usp=sharing">Colab Notebook</a></li>
+          </ul>
+        </td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td></td>
+        <td>Mon, Sep. 7 </td>
+        <td class="topic">No class</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 3</td>
+        <td>Wed, Sep. 9 </td>
+        <td class="topic">Nonlinear filtering
+          <div class="subtopic">Laplacian
+            <br>Hybrid images
+            <br>Template matching
+            <br>Bilateral filtering</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec3-nonlinear-filtering.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/BcyHzjU0CCEo966WLBE2la6M4XOt67pxiBVZeul96GgiSgmhNp5o2Zs0tfrVnkul.ZccWE87wqudM8gt9?startTime=1599678183000">Recording</a></li>
+            <li><a href="http://szeliski.org/Book/">Szeliski, Nonlinear Filtering, Chapter 3.3</a></li>
+            <li><a href="https://people.csail.mit.edu/sparis/bf_course/course_notes.pdf">Paris et al., bilateral filtering intro (optional)</a></li>
+          </ul>
+        </td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Sec. 2</td>
+        <td>Fri, Sep. 11</td>
+        <td class="topic">More linear algebra
+          <div class="subtopic"></div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/disc/More_Linear_algebra_Tutorial.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/ZY9dVrC9qqIWEvRo6A8fjdF7A_4IDoor-drGfzKi0re9CwNXVK6FQw58CTxi2fXk.-XaI-jni4z7082de">Recording</a></li>
+          </ul>
+        </td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 4</td>
+        <td>Mon, Sep. 14</td>
+        <td class="topic">Frequencies
+          <div class="subtopic">Image statistics
+            <br>Fourier transform</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec4-signal.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/KOweozSZTqEvK5wy_JBgYynj_jPqQNb5W-YPMqjtzXE8D3HDiWf7ht8og141VR4_.Ph-GPmaySh_hDXnB?startTime=1600109952000">Recording</a></li>
+            <li><a href="http://szeliski.org/Book/">Szeliski, Fourier Transforms, Chapter 3.4</a></li>
+            <li><a href="http://6.869.csail.mit.edu/fa19/lectures/notes_lecture4.pdf">Torralba, Freeman, and Isola: Fourier Analysis</a></li>
+          </ul>
+        </td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 5</td>
+        <td>Wed, Sep. 16</td>
+        <td class="topic">Image pyramids
+          <div class="subtopic">Gaussian pyramid
+            <br>Laplacian pyramid
+            <br>Resampling
+            <br>
+          </div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec5-pyramid.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/play/q2lOCikbkySHf_sImue7IoMifNIrZLh6uFxCXp3ppctk2hHfctT59-NGpksak5HkeBHmlRsSycPuK8Ll.-mze1t5Wac3LHflc">Recording</a></li>
+            <li><a href="http://szeliski.org/Book/">Szeliski Chapter 3.5</a></li>
+          </ul>
+        </td>
+        <td>ps1 due
+          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps2.pdf">ps2 out (frequency)</a></td>
+      </tr>
+      <tr class="alternate">
+        <td>Sec. 3</td>
+        <td>Fri, Sep. 18</td>
+        <td class="topic">Fourier tutorial
+          <div class="subtopic"></div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/disc/Fourier_Transform_Discussion.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/play/35TRsTDlEDRNlEhzxHuC5bc3d436WVFrxMiFnWX2O_uKDJIa1EIVadOZ-vCt6PyLMP9EcKR0Jnj0Epc2.sMHBnAVEE7DOdPUS">Recording</a></li>
+          </ul>
+        </td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 6</td>
+        <td>Mon, Sep. 21</td>
+        <td class="topic">Machine learning
+          <div class="subtopic">Nearest Neighbor
+            <br>Linear regression
+            <br>Overfitting</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec6-ml.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/dDxUlB_tVg2sQJ8a9KsaDMKoLmVK2oEssRdg1NlMjH2B4Sp7GHXz34eNwKxQK8NU.LxXRhpNLGQ-F_VMJ?startTime=1600714887000">Recording</a></li>
+            <li><a href="http://szeliski.org/Book/">Szeliski 5.1 - 5.1.2</a></li>
+            <li><a href="http://www.deeplearningbook.org/contents/ml.html">Goodfellow Chapter 5, ML basics (optional)</a></li>
+          </ul>
+        </td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 7</td>
+        <td>Wed, Sep. 23</td>
+        <td class="topic">Linear classifiers
+          <div class="subtopic">Logistic regression
+            <br>Stochastic gradient descent</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec7-linear.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/zh2g2TVuFjEB1b_-nTluag_FekwRYkO4Ae8f9mO8JG3Nf4Qoulckw421zXTuN5wp.t_HWYchVATtwg6eG?startTime=1600887579000">Recording</a></li>
+          </ul>
+        </td>
+        <td>ps2 due
+          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps3.pdf">ps3 out (intro to ML)</a></td>
+      </tr>
+      <tr class="alternate">
+        <td>Sec. 4</td>
+        <td>Fri, Sep. 25</td>
+        <td class="topic">Learning tutorial
+          <div class="subtopic"></div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/sessions/disc_4.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/play/uHoJSI-arodELv3lzUS4zv_xgQ_8XfSpiQbFWZ5i_SNFvSqL3xKyr3MXQe9R4XGPXFVjFDEjpcEaVL8S.79pr6imsl2Ew3zN1">Recording</a></li>
+          </ul>
+        </td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 8</td>
+        <td>Mon, Sep. 28</td>
+        <td class="topic">Neural networks
+          <div class="subtopic">Nonlinearities
+            <br>Network structure
+            <br>Regularization</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec8-nn.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/lP_AenyIBotT6TObXc_oj2S4HiVHqH_lz-B-B2bZQgqG2_jiWBlEYgLiQHOzGO8_.oN9qc_cUlOLGLPu3?startTime=1601319694000">Recording</a></li>
+            <li>Szeliski 5.3</li>
+          </ul>
+        </td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 9&lt;</td>
+        <td>Wed, Sep. 30</td>
+        <td class="topic">Optimization
+          <div class="subtopic">Computation graphs
+            <br>Backpropagation
+            <br>Momentum</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec9-optimization.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/52zjOO9RzbKQ37o5pgpP9fid5df6m8ii4ba8neTl5nw-yiZl0xlhvE04kEVtocWD._KvKUF3QUWkog5vu?startTime=1601492346000">Recording</a></li>
+            <li>Szeliski 5.3.5-5.3.6</li>
+            <li><a href="http://www.deeplearningbook.org/contents/optimization.html">Goodfellow optimization</a></li>
+            <li><a href="http://colah.github.io/posts/2015-08-Backprop/">C. Olah backpropagation notes</a></li>
+            <li><a href="http://www.cs.toronto.edu/~rgrosse/courses/csc421_2019/readings/L07%20Optimization.pdf">R. Grosse optimization notes</a></li>
+            <li><a href="http://www.cs.toronto.edu/~rgrosse/courses/csc421_2019/readings/L06%20Automatic%20Differentiation.pdf">R. Grosse automatic differentiation notes</a></li>
+          </ul>
+        </td>
+        <td>ps3 due
+          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps4.pdf">ps4 out (backpropagation)</a></td>
+      </tr>
+      <tr class="alternate">
+        <td>Sec. 5</td>
+        <td>Fri, Oct. 2</td>
+        <td class="topic">PyTorch tutorial
+          <div class="subtopic"></div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://colab.research.google.com/drive/1V2Ruceh1o8-u3bQ7R9lyaJgIC3uMnxRi?usp=sharing">Colab Notebook</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/9ai4JHcqFYUniwKcz7OKUJkQo7KVbd2sHgjR9kqdkHsvCOUmOv-oL5Zu1zYy5pIz.aiogJ4Ci6f9KVemw?startTime=1601656373000">Recording</a></li>
+          </ul>
+        </td>
+        <td></td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 10</td>
+        <td>Mon, Oct. 5 </td>
+        <td class="topic">Convolutional networks
+          <div class="subtopic">Convolution layers
+            <br>Pooling
+            <br>Normalization</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec10-cnns.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/GlRaJCpBoTAeTNISkQhv82TsGdvEGtiLlwlUEdIfBKod0p4vkSPgTL8G731KLAIe.5A20xNCFf4K9053X?startTime=1601924563000">Recording</a></li>
+            <li>Szeliski 5.4</li>
+            <li><a href="http://www.deeplearningbook.org/contents/convnets.html">Goodfellow: Chapter 9, Convolutional networks</a></li>
+            <li><a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">AlexNet paper</a></li>
+            <li><a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf">ResNet paper</a></li>
+          </ul>
+        </td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 11</td>
+        <td>Wed, Oct. 7 </td>
+        <td class="topic">Scene understanding
+          <div class="subtopic">Scene recognition
+            <br>Semantic segmentation</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec11-scene.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/99VQAEBtyECeSl90wb-tG_qyZbOSCshYHwKa7RrexYSaudEoXrRQxqofiYuGwrrA.2xOcDAcWmeMDTHwx?startTime=1602096988000">Recording</a></li>
+          </ul>
+        </td>
+        <td>ps4 due
+          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps5.pdf">ps5 out (scene recognition)</a></td>
+      </tr>
+      <tr class="alternate">
+        <td>Sec. 6</td>
+        <td>Fri, Oct. 9</td>
+        <td class="topic">Office hours
+          <div class="subtopic"></div>
+        </td>
+        <td></td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 12</td>
+        <td>Mon, Oct. 12</td>
+        <td class="topic">Object detection
+          <div class="subtopic">Sliding window
+            <br>Region-based CNNs
+            <br>Instance segmentation</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec12-object.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/Ct1wKJ0xqVJ1vqu7y3_adO9M3dIXWrNKaWDx7gFfWwvAY7hGwUzRJi3D7TpBKuMp.ugt3iEhh9lFtc0ZL?startTime=1602529187000">Recording</a></li>
+            <li>Szeliski 6.3</li>
+            <li><a href="https://arxiv.org/abs/1703.06870">Mask R-CNN paper</a></li>
+          </ul>
+        </td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 13</td>
+        <td>Wed, Oct. 14</td>
+        <td class="topic">Image synthesis
+          <div class="subtopic">Texture synthesis
+            <br>GANs
+            <br>Conditional GANs</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec12-imagesynth.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/2DZUrCKXgAkZGI0BWXYMetUvwgZYcOoAQ4KVOZYV-QBK75mvBa0FfPvl3NYgw9lj.mVDSJ9aGHi9Rp1iO?startTime=1602701834000">Recording</a></li>
+            <li><a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf">Gatys et al. style transfer paper</a></li>
+            <li><a href="https://arxiv.org/pdf/1406.2661.pdf">GAN paper</a></li>
+            <li><a href="https://phillipi.github.io/pix2pix/">pix2pix paper</a></li>
+            <li><a href="https://junyanz.github.io/CycleGAN/">CycleGAN paper</a></li>
+          </ul>
+        </td>
+        <td>ps5 due
+          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps6.pdf">ps6 out (image synthesis)</a> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Sec. 7</td>
+        <td>Fri, Oct. 16</td>
+        <td class="topic">Office hours
+          <div class="subtopic"></div>
+        </td>
+        <td></td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 14</td>
+        <td>Mon, Oct. 19</td>
+        <td class="topic">Temporal models
+          <div class="subtopic">3D CNNs
+            <br>RNNs
+            <br>Attention</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec14-action.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/R4N7YooNSH8v2vPmMv-9nWU3dafbKdQSmdZmTot8aJKUbi0nTw_x6G0Fem8w_yXy.dfA1zF19KaW-QlJ-?startTime=1603133921000">Recording</a></li>
+            <li><a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">LSTM tutorial by C. Olah</a></li>
+            <li><a href="https://www.deeplearningbook.org/contents/rnn.html">Goodfellow 10</a></li>
+          </ul>
+        </td>
+        <td>
+          <!-- <tr class = "alternate"><td>Lec. 15</td><td>Wed, Oct. 21</td><td class = "topic">Representation learning<div class = "subtopic">Transfer learning<br>Autoencoders<br>Self-supervision</div></td><td><td>ps6 due<br><a href = "psets/ps7.pdf">ps7 out (object detection)</a> -->
+        </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 14</td>
+        <td>Wed, Oct. 21</td>
+        <td class="topic">Language
+          <div class="subtopic">Autoregressive models
+            <br>Attention
+            <br>Captioning
+            <br>
+          </div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec15-language.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/VGIdclkUQkweugBq6BbwubzbJtq84PIoUJHdBKWbuif76eT0vysiCRJQcS9ove1t.wtqyoR_mxp4LE4_B?startTime=1603306581000">Recording</a>
+              <!-- <li>Szeliski 6.6 --></li>
+          </ul>
+        </td>
+        <td>ps6 due
+          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps7.pdf">ps7 out (object detection)</a> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Sec. 8</td>
+        <td>Fri, Oct. 23</td>
+        <td class="topic">Office hours
+          <div class="subtopic"></div>
+        </td>
+        <td></td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 16</td>
+        <td>Mon, Oct. 26</td>
+        <td class="topic">Representation learning
+          <div class="subtopic">Transfer learning
+            <br>Autoencoders
+            <br>Self-supervision</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec16-representation.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/cLW0BDEXhdTtIF0X9mKeC0YZORivs74qZiuT5nIgwfC4AF2ut8sNK8sMiA8eBX0a.dPGRv8QJTXwRd5om?startTime=1603738626000">Recording</a></li>
+          </ul>
+        </td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 17</td>
+        <td>Wed, Oct. 28</td>
+        <td class="topic">Multimodal learning
+          <div class="subtopic"></div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec17-multimodal.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/uNcIDcrQDsfhnG9VHwk77V8IaTPXHNEtXYfgVCRp53t-62rZAvQwzNHMD676tjt9.isup9WpBgPeSfTI-?startTime=1603911420000">Recording</a></li>
+            <li><a href="https://www.youtube.com/watch?v=G-lN8vWm3m0">McGurk effect video</a></li>
+          </ul>
+        </td>
+        <td><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/proposal.pdf">proposal info out</a> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Sec. 9</td>
+        <td> Fri, Oct. 30</td>
+        <td class="topic">Project office hours
+          <div class="subtopic"></div>
+        </td>
+        <td></td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 17</td>
+        <td>Mon, Nov. 2</td>
+        <td class="topic">Image formation
+          <div class="subtopic">Plenoptic function
+            <br>Pinhole cameras
+            <br>Homogeneous coordinates
+            <br>Projection matrix</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec18-imageformation.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/iZ9ALF3B4YHGvdQdYpoOxLI93R3g0SCMdbdK1yqqTKycijbFkYsaksGCscsMTHeo.IZrJa7vYRWZiq0nA?startTime=1604346975000">Recording</a></li>
+          </ul>
+        </td>
+        <td>
+          <!-- <a href = "psets/ps8.pdf">ps8 out (representation learning)</a> --></td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 18</td>
+        <td>Wed, Nov. 4 </td>
+        <td class="topic">Multi-view geometry
+          <div class="subtopic">Triangulation
+            <br>Epipolar lines
+            <br>Homographies
+            <br>Warping</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec19-geometry.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/i33W23EDgHIKEA6k6fk9xabyvBf5l-Ox4GT7pcEmNWU3nZVULC5z3DOcXW7SEbSb.sbiIOoUJ0xslMNti?startTime=1604519945000">Recording</a></li>
+            <li>Szeliski 2.1</li>
+            <li><a href="https://www.robots.ox.ac.uk/~vgg/hzbook/hzbook2/HZepipolar.pdf">Hartley and Zisserman: epipolar geometry</a></li>
+          </ul>
+        </td>
+        <td>ps7 due
+          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps8.pdf">ps8 out (self-supervised learning)</a> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Sec. 10</td>
+        <td>Fri, Nov. 6 </td>
+        <td class="topic">Project office hours
+          <div class="subtopic"></div>
+        </td>
+        <td></td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 19</td>
+        <td>Mon, Nov. 9 </td>
+        <td class="topic">Fitting geometric models
+          <div class="subtopic">Feature matching
+            <br>RANSAC</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec20-reconstruction.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/a3fBaxBmNgWRSyM-C97Gyn5BWvy2hRI7JBNqy66SX_IkNu3mCqxK4TgAncl95J5K.DaT67MHA8YR-xk4Q?startTime=1604951870000">Recording</a></li>
+          </ul>
+        </td>
+        <td><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/final-guidelines.pdf">final project guidelines</a> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 20</td>
+        <td>Wed, Nov. 11</td>
+        <td class="topic">3D reconstruction
+          <div class="subtopic">Structure from motion
+            <br>Multi-view stereo
+            <br>Stereo algorithms
+            <br>
+          </div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec21-sfm.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/FAaZKzeLbb8ZKtXEBJy3hS6WW0RYtz7b4vR8BzX6nsd9Y19FLo-9B50yKyd2iffK.Wd_YXMbmeqdyackZ?startTime=1605124652000">Recording</a></li>
+          </ul>
+        </td>
+        <td>ps8 due
+          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps9.pdf">ps9 out (panoramic stitching)</a> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Sec. 11</td>
+        <td>Fri, Nov. 13</td>
+        <td class="topic">Geometry tutorial
+          <div class="subtopic"></div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/disc/Geometry.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/play/AoHdqRlsHvRNz5KoR3Mn66_YSpCmPykMqWRPNEKY39TILFV1wxAj7QawY4a2K__FHq33Gwn3SY9pCVHC.0kpTp37mV99W4Zi6">Recording</a></li>
+          </ul>
+        </td>
+        <td></td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 21</td>
+        <td>Mon, Nov. 16</td>
+        <td class="topic">Color <font style="font-weight: normal">(Lecturer: Haozhu Wang)</font>
+          <div class="subtopic">Color perception
+            <br>Color constancy</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec21-color.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/play/lMu9UGD7H4L369XVZ-cJuaRx-2kC7lf4qjXchUy_XElCeylKIL3N7V5r3bmrm6dYqtjF1KEftb2rqZnu.NuNhMxw3ExYKmBYx">Recording</a></li>
+          </ul>
+        </td>
+        <td></td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 22</td>
+        <td>Wed, Nov. 18</td>
+        <td class="topic">Motion
+          <div class="subtopic">Optical flow
+            <br>Aperture problem
+            <br>Multi-scale estimation</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec22-motion.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/ZRiwLjDJmmQyWhDkk06_eF6juZOR7jpV-40J4N00rATkyYO1Fy1301LcT0YSCE63.dIcng7XElfelsOLA?startTime=1605729634000">Recording</a></li>
+          </ul>
+        </td>
+        <td>ps9 due
+          <br>project proposal due
+          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps10.pdf">ps10 out (motion)</a> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Sec. 12</td>
+        <td>Fri, Nov. 20</td>
+        <td class="topic">Project office hours
+          <div class="subtopic"></div>
+        </td>
+        <td></td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td colspan="5" class="topic">
+          <center>Thanksgiving break</center>
+        </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 23</td>
+        <td>Mon, Nov. 30</td>
+        <td class="topic">Light and shading
+          <div class="subtopic">Shape from shading
+            <br>Photometric stereo
+            <br>Intrinsic images</div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec23-light.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/txLEPtTYHoSnHgC0Bj_4AtxN0H9Ba1NIibfz1r9klh3v2MJvbqH1KNrDUX9rhAw.J6sdbZWtvVTunFUm?startTime=1606766419000">Recording</a></li>
+          </ul>
+        </td>
+        <td>
+          <!-- <tr class = "alternate"><td></td><td>Wed, Nov. 25</td><td class = "topic">Thanksgiving break<td><td></tr> -->
+          <!-- <tr class = "alternate"><td></td><td>Fri, Nov. 27</td><td class = "topic">Thanksgiving break<td><td></tr> -->
+          <!-- <tr class = "alternate"><td>Lec. 24</td><td>Mon, Nov. 23</td><td class = "topic">Embodied vision<div class = "subtopic">Learning from demonstrations<br>Reinforcement learning</div></td><td><td> -->
+          <!-- <tr class = "alternate"><td>Lec. 25</td><td>Wed, Nov. 25</td><td class = "topic">Bias<div class = "subtopic">Datasets<br>Fairness<br></div></td><td><td> -->
+          <!-- <tr class = "alternate"><td>Sec. 13</td><td>Fri, Nov. 27</td><td class = "topic">Project office hours<div class = "subtopic"></div></td><td><td> -->
+        </td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 24 </td>
+        <td>Wed, Dec. 2</td>
+        <td class="topic">Embodied vision
+          <div class="subtopic">Learning from demonstrations
+            <br>Reinforcement learning</div>
+          <!--3-->
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec24-embodied.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/ZCCRO2J1uTpVSEb035eedSSGkmekWrJteLCJQGoWRao8xx-mVAqJG28MTlhtgrzr.iAxtEF0HD_av8AOC?startTime=1606939046000">Recording</a> </li>
+          </ul>
+        </td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Sec. 14 </td>
+        <td>Fri, Dec. 4</td>
+        <td class="topic">Project office hours
+          <div class="subtopic"> </div>
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="alternate">
+        <td>Lec. 28</td>
+        <td>Mon, Dec. 7</td>
+        <td class="topic">Bias and fake images
+          <div class="subtopic"></div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec25-bias.pdf">Slides</a></li>
+            <li><a href="https://umich.zoom.us/rec/share/4CI6o6z8yeKCDcopuasawjcBJg31mZ5TpM_UGYY9qXB6pAi3NtxZut5XT-Z38Gfd.H3_Xu_zBqJzqv9qa?startTime=1607371354000">Recording</a></li>
+          </ul>
+        </td>
+        <td> ps10 due </td>
+      </tr>
+    </tbody>
+
+</table>
+<!-- End schedule -->
+                    </font>
+                  </div>
+              </center>
+            </section>
+            <br><br>
+						<section id="staff" class="main">
+              <center>
+                <header class="major">
+                  <h2>Staff &amp; Office Hours</h2>
+							  </header>
+                <!-- <font size = "+1"> -->
+                  <br>
+                  <!-- <style> -->
+                  <!--   .vline -->
+                  <!--   { -->
+                  <!--       border-left: 0px dashed gray; -->
+                  <!--       height: 175px; -->
+                  <!--   }  -->
+                  <!-- </style> -->
+                  <!-- <style>a { text-decoration: underline }</style> -->
+                  <style>
+                    a.stafflink {
+                        text-decoration: none;
+                        decoration: none;
+		                    border-bottom: none; 
+                    }
+                  </style>
+                  <div class="table-wrapper" style="width:90%">
+                    <table>
+                      <tbody><tr>
+                        <td>
+                          <div class="staff">
+                            <div><img src="./src/andrew.jpg" class="staff"></div>
+                            <div><b><a href="http://andrewowens.com/" class="stafflink">Andrew Owens</a></b></div>
+                            <div><strong>Instructor</strong></div>
+                          </div>
+                        </td>                        
+                        <td><div style="width:17pt"></div></td>
+                        <td>
+                          <div class="staff">
+                            <div><img src="./src/haozhu.jpg" class="staff"></div>
+                            <div><b><a href="https://www.haozhu-wang.com/" class="stafflink">Haozhu Wang</a></b></div>
+                            <div>Graduate student (GSI)</div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="staff">
+                            <div><img src="./src/zhengyu.jpg" class="staff"></div>
+                            <div><b><a href="https://www.linkedin.com/in/zhengyu-huang-709b36ba" class="stafflink">Zhengyu Huang</a></b></div>
+                            <div>Graduate student (GSI)</div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="staff">
+                            <div><img src="./src/hansal.jpg" class="staff"></div>
+                            <div><b><a href="https://hansalshah.github.io/" class="stafflink">Hansal Shah</a></b></div>
+                            <div>Graduate student (GSI)</div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody></table>
+                </div>
+              </center>
+
+              <center>
+                <!-- <br><b>Office Hours</b><br><br> -->                
+                <br>
+               <div class="table-wrapper" style="width:90%">
+                   <table class="alt">
+                     <thead>
+                       <tr>
+                         <th style="text-align:center">Name</th>
+                         <th style="text-align:center">Office hours times</th>
+                     </tr></thead>
+                     <tbody><tr class="alternate"><td>Haozhu Wang   </td><td>Thursday 9-10pm</td><td></td></tr>
+                     <tr class="alternate"><td>Zhengyu Huang </td><td>Tuesday 4-5pm</td><td>Wednesday 1:45 - 2:45pm</td></tr>
+                     <tr class="alternate"><td>Hansal Shah   </td><td>Tuesday 2-3pm</td><td>Friday 5-6pm</td></tr>
+                     <tr class="alternate"><td>Andrew Owens  </td><td>Monday 4:45 - 5:15pm </td><td> Friday 3pm-4pm</td></tr> 
+                   </tbody></table>
+                 <div align="left">Office hours will take place over
+                 video chat, using the same <a href="https://umich.instructure.com/courses/389326/pages/class-zoom-link">Zoom link</a>
+                 as lecture. When you join the call, you will be put
+                 on a waiting list. You will then meet one-on-one with
+                 a member of the course staff. </div>
+                 <br><br>
+               </div>
+               
+						</center></section>
+            
+						<!-- Introduction -->
+						<section id="syllabus" class="main">
+              <center>
+                <header class="major">
+                  <h2>Course information</h2>
+							  </header>
+								<div class="spotlight" style="width: 90%; text-align: left">
+									<div class="content">
+                    <p>EECS 442 is an advanced undergraduate-level
+                      computer vision class. Class topics include
+                      low-level vision, object recognition, motion, 3D
+                      reconstruction, basic signal processing, and
+                      deep learning. We'll also touch on very recent
+                      advances, including image synthesis,
+                      self-supervised learning, and embodied
+                      perception.
+                    <br>
+
+                    </p><p><b>Lectures:</b>
+                      </p><div style="padding-left: 4%; margin-top: -20px">
+                      <ul>
+                        <li>Lectures will take place over Zoom on
+                          Monday and Wednesday, 3:00 - 4:30pm. Attendance
+                          will not be required; we'll post lecture
+                          recordings online for people who can't make
+                          it. See
+                          <a href="https://umich.instructure.com/courses/389326/pages/class-zoom-link">here</a> for the Zoom
+                          link. <b>Please do not share the link</b>, so that we
+                            can avoid Zoom bombing.
+                        </li><li>We hope that you'll participate in class!
+                          If you have a question during lecture, we
+                          reccomend that you use the "raise hand"
+                          feature, then unmute yourself when we call
+                          on you, or send a message.
+
+                          <!-- feel -->
+                          <!-- free to send a message to the class, or -->
+                          <!-- unmute and speak (for this, you are -->
+                          <!-- encouraged to use the "raise hand" feature -->
+                          <!-- beforehand). -->
+                      </li></ul>
+                      </div>
+                      <br>
+                      
+                    <p><b>Discussion section:</b> <br>This class has
+                      two discussion sections, which both use the
+                      same <a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/">Zoom link</a> as the
+                      lecture:<br>
+                      </p><div style="padding-left: 4%; margin-top: -35px">
+                      <ul>
+                        <li>Friday, 10:30am - 11:30am
+                        </li><li>Friday, 12:30pm - 1:30pm
+                      </li></ul>
+                      </div>
+                      
+
+                      Some weeks, we'll host tutorials during
+                      these sections, where GSIs will cover a topic in
+                      depth (e.g. a PyTorch guide). These tutorials
+                      appear in the <a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/#schedule">
+                      schedule</a>. Attendance to these tutorials is
+                      optional, and recordings will be posted
+                      online. Other weeks, the discussion section will
+                      function as additional office hours and project
+                      discussion.                    
+                      <p>
+                    </p><p><b>Prerequisites:</b> 
+                      </p><div style="padding-left: 4%">
+                        <ul style="margin-top: -25px">
+                          <li>
+                            This course puts a strong emphasis on
+                            mathematical methods. We'll cover a wide
+                            range of techniques in a short amount of
+                            time. <b>Knowledge of linear algebra is
+                            <i>highly</i> encouraged</b>. Please
+                            consider taking a linear algebra course
+                            before taking this class; otherwise, it
+                            may be quite difficult. For a refresher,
+                            please see <a href="http://www.cs.cmu.edu/~zkolter/course/15-884/linalg-review.pdf">here</a>. This
+                            material should mostly look familiar to
+                            you.
+                            
+                          </li><li>This class will require a significant
+                            amount of programming. All programming
+                            will be completed in Python, using
+                            numerical libraries such as numpy, scipy,
+                            and PyTorch. The problem sets will be
+                            completed using Jupyter notebooks,
+                            generally using <a href="https://colab.research.google.com/">Google
+                            Colab</a>. In some assignments, we'll give
+                            you starter code; in others, we'll ask you
+                            to write a large amount of code from
+                            scratch.
+                        </li></ul>
+                      </div><br>
+
+                    <p><b>Q&amp;A:</b> This course has a <a href="https://piazza.com/umich/fall2020/eecs442">Piazza
+                    forum</a>, where you can ask public questions. If
+                    you cannot make your post public (e.g., due to
+                    revealing problem set solutions), please mark your
+                    post <i>private</i>, or come to office
+                    hours. Please note, however, that the course staff
+                    cannot provide help debugging code, and there is
+                    no guarantee that they'll be able to answer
+                    last-minute homework questions before the
+                    deadline. We also appreciate it when you respond
+                    to questions from other students! If you have an
+                    important question that you would prefer to discuss
+                    over email, you may email the course staff
+                    (<a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/eecs442-fa20-staff@umich.edu">eecs442-fa20-staff@umich.edu</a>),
+                    or you can contact the instructor by email
+                    directly.
+                    
+
+                    </p><p><b>Homework:</b> There will be homework
+                    assignments <i>approximately every week</i>. All
+                    programming assignments are to be completed in
+                    Python, using the starter code that we
+                    provide. Assignments will always be due at
+                    midnight (11:59pm) on the due date. The
+                    assignments will all be worth approximately equal
+                    amounts. Written problems will usually be
+                    submitted to <a href="https://www.gradescope.com/courses/78914">Gradescope</a>. You
+                    may be asked to annotate your pdf (e.g. by selecting
+                    your solution to each problem).
+                                            
+                    <!-- <p><b>Midterm:</b> There will be an evening -->
+                    <!--   midterm exam, approximately 2/3 of the way -->
+                    <!--   through the semester (date TBD). -->
+
+                    </p><p><b>Final project:</b> In lieu of a final exam,
+                    we'll have final project. This project will be
+                    completed in small groups during the last weeks of
+                    the class. The direction for this project is
+                    open-ended: you can either choose from a list of
+                    project ideas that we distribute, or you can
+                    propose a topic of your own. A short project
+                    proposal will be due approximately halfway through
+                    the course.  During the final exam period, you'll
+                    turn in a final report and give a short
+                    presentation. You may use an ongoing research work
+                    for your final project, as long it meets the
+                    requirements.
+
+                    <!-- <p><b>Grading:</b> Class grades will be weighted: -->
+                    <!--   <div style = "padding-left: 4%"> -->
+                    <!--   <ul style = "margin-top: -25px"> -->
+                    <!--     <li>Homework: 60% -->
+                    <!--     <li>Midterm: 20% -->
+                    <!--     <li>Final project: 20% -->
+                    <!--   </ul> -->
+                    <!--   </div><br> -->
+
+                    </p><p><b>Textbook:</b> There are no required textbooks to purchase. As an experiment, we'll be using a new <i>draft</i> version of the online book:
+                      </p><div style="padding-left: 4%">
+                        <ul style="margin-top: -28px">
+                          <li>Szeliski. <i>Computer Vision: Algorithms and Applications, 2nd edition draft</i> <a href="http://szeliski.org/Book/">(available for free online)</a></li>
+                        </ul>
+                      </div><div style="margin-top: 5px"></div>
+                      <div style="padding-left: 1%">
+                        If you have feedback for the author, please submit it <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGPpO8rm3tJnYNt2j7U93UQz1_TTx50HBavF6j5cKBh8K6hg/viewform?usp=sf_link">here</a>, and we'll pass it along!
+                        <p></p><p>The following textbooks may also be useful as references:
+                      </p></div>
+                        <div style="padding-left: 4%; margin-top: -25px">
+                      <ul>
+                        <li>Goodfellow, Bengio, Courville. <i>Deep Learning</i>. <a href="http://www.deeplearningbook.org/"> (available for free online)</a></li>
+                        <li>Forsyth and Ponce. <i>Computer Vision: A Modern Approach</i>.</li>
+                        <li>Hartley and Zisserman. <i>Multiple View Geometry in Computer Vision</i>.</li>
+                      </ul>
+                      </div><br>
+                      
+                    <p><b>Acknowledgements:</b> This course draws
+                       heavily from MIT's <a href="http://6.869.csail.mit.edu/fa14/">6.869:
+                       Advances in Computer Vision</a> by Antonio
+                       Torralba, William Freeman, and Phillip
+                       Isola. It also includes lecture slides from
+                       other researchers, including <a href="http://slazebni.cs.illinois.edu/">Svetlana
+                       Lazebnik</a>, <a href="https://people.eecs.berkeley.edu/~efros/">Alexei
+                       Efros</a>,  <a href="https://web.eecs.umich.edu/~fouhey/">David
+                       Fouhey</a>, and <a href="http://www.cs.cornell.edu/~snavely">Noah
+                       Snavely</a> (please see acknowledgments in the
+                       lecture slides).
+                      
+                    </p><p><b>Late policy:</b> You'll have <strike>7</strike>  <b> 9 late
+                        days</b> to use over the course of the
+                        semester. Each time you use one, you may
+                        submit a homework assignment one day late
+                        without penalty. You are allowed to use
+                        multiple late days on a single assignment. For
+                        example, you can use all of your days at once
+                        to turn in one assignment a week late. You
+                        do <i>not</i> need to notify us when you use a
+                        late day; we'll deduct it automatically. If
+                        you run out of late days and still submit
+                        late, your assignment will be penalized at a
+                        rate of 30% per day. If you edit your
+                        assignment after the deadline, this will count
+                        as a late submission, and we'll use the
+                        revision time as the date of submission (after
+                        a short grace period of a few minutes). We
+                        will not provide additional late time, except
+                        under exceptional circumstances, and for these
+                        we'll require documentation (e.g., a doctor's
+                        note). Please note that the late days are
+                        provided to help you deal with minor setbacks,
+                        such as routine illness or injury, paper
+                        deadlines, interviews, and computer problems;
+                        these do not generally qualify for an
+                        additional extension.
+
+                      </p><p>Please note that, due to the number of late
+                      days available, there will a lag between
+                      submission and grading times — we'll need
+                      to wait for the late submissions to arrive
+                      before we can finish grading.
+
+                    </p><p><b>Regrade requests:</b> If you think there was
+                        a grading error, you'll have <b>9 days</b> to
+                        submit a regrade request, using
+                        Gradescope. This will be a strict deadline,
+                        even for significant mistakes such as missing
+                        grades, so please look over your graded
+                      assignments!
+
+
+                      
+                      
+
+                    </p><p><b>Support:</b> The <a href="https://caps.umich.edu/">counseling and
+                    psychological services center</a> (CAPS) provides
+                    support for a variety of issues, including mental
+                    health and stress.
+
+
+                    </p><p><b>Grading:</b>
+                      <!-- <div style = "padding-left: 0%; margin-top: -18px"></div> -->
+                      </p><div style="padding-left: 4%; margin-top: -20px">
+                      <ul><li> Grades will be computed as follows, with all homeworks equally weighted:
+                      <!-- <div style = "padding-left: 0%; margin-top: -30px"></div> -->
+                      <!-- Grades will be weighted as follows, with all homeworks equally weighted: -->
+                      <!-- <div style = "padding-left: 4%"> -->
+                      <!-- <ul style = "margin-top: -29px"> -->
+                      <!--   <li>Homework: 70% -->
+                      <!--   <li>Final project: 30% -->
+                      <!-- </ul> -->
+                        <!-- </div> -->
+                      <table style="width:20%; padding: 0 0 0 0; line-height: 8pt; margin-top: 5px">
+                        <tbody><tr class="alternate" style="border: 1px solid #dddddd"><td>Homework       </td><td align="right">70%
+                        </td></tr><tr class="alternate" style="border: 1px solid #dddddd"><td>Final project  </td><td align="right">30%
+                      </td></tr></tbody></table>
+                      <!-- <div style = "padding-left: 0%; margin-top: -18px"></div> -->
+
+
+                      <!-- <br><br> -->
+                      <!-- <div style = "padding-left: 0%; margin-top: 7px"></div> -->
+                      </li><li> We'll use these approximate grade thresholds:
+                      <table style="width:12%; padding: 0 0 0 0; line-height: 8pt; margin-top: 5px">
+                        <tbody><tr class="alternate" style="border: 1px solid #dddddd"><td>A+ </td><td align="right">TBD
+                        </td></tr><tr class="alternate" style="border: 1px solid #dddddd"><td>A  </td><td align="right">92%
+                        </td></tr><tr class="alternate" style="border: 1px solid #dddddd"><td>A- </td><td align="right">90%
+                        </td></tr><tr class="alternate" style="border: 1px solid #dddddd"><td>B+ </td><td align="right">88%
+                        </td></tr><tr class="alternate" style="border: 1px solid #dddddd"><td>B  </td><td align="right">82%
+                        </td></tr><tr class="alternate" style="border: 1px solid #dddddd"><td>B- </td><td align="right">80%
+                        </td></tr><tr class="alternate" style="border: 1px solid #dddddd"><td>C+ </td><td align="right">78%
+                        </td></tr><tr class="alternate" style="border: 1px solid #dddddd"><td>C  </td><td align="right">72%
+                        </td></tr><tr class="alternate" style="border: 1px solid #dddddd"><td>C- </td><td align="right">70%
+                      </td></tr></tbody></table>
+                      <div style="padding-left: 0%; margin-top:
+                        -18px"></div> These are <i>lower bounds</i> on
+                        letter score grades. For example, if you get
+                        an 81%, you will be guaranteed to get a B-. We
+                        may gently curve the class <i>up</i>, in a way that would 
+                        only <i>improve</i> your letter grade: e.g. after the
+                        curve, an 81% <i>might</i> round up to a B,
+                        but it would not round down to a C+.
+                      </li></ul>
+                      </div><br>
+                    <p><b>Academic integrity:</b> While you are
+                       encouraged to discuss homework
+                      assignments with other students, <i>your
+                        programming work must be completed
+                        individually</i>. You must also write up your
+                      solution on your own. You may not search for
+                      solutions online, or to use existing
+                      implementations of the algorithms in the
+                      assignments. Please see the Michigan
+                      engineering
+                      <a href="https://elc.engin.umich.edu/honor-council/">honor
+                        code</a> for more information.
+
+                </p></div>
+              </div></center>
+              <br><br><br>
+						</section>
+
+            
+   				<!-- Footer -->
+					  <footer id="footer">
+              <p class="copyright"><font size="-1">© 2020 The
+              University of Michigan. Website based on a template
+              from <a href="https://html5up.net/">HTML5
+              Up</a>. <!-- Background image: collage of <a href = "https://groups.csail.mit.edu/vision/TinyImages/">80 million tiny images</a> by Torralba et al.</p> -->
+					</font></p></footer><font size="-1">
+			</font></section></div><font size="-1">
+
+			<script src="./src/jquery.min.js"></script>
+			<script src="./src/jquery.scrollex.min.js"></script>
+			<script src="./src/jquery.scrolly.min.js"></script>
+			<script src="./src/skel.min.js"></script>
+			<script src="./src/util.js"></script>
+
+
+	
+</font></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

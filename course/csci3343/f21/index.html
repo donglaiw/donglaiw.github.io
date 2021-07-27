@@ -34,40 +34,61 @@
               </h2>
           </div>
 				</header>
-      
         <center>
           <div style="background: #EEEEEE; height: 7px"></div>
         </center>
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>							
-                            <li><a href="#overview" class="inheritcolor">Overview</a></li> <b>·</b>
-						    <li><a href="#schedule" class="inheritactive">Schedule</a></li> <b>·</b>
-                            <li><a href="#staff" class="inheritcolor">Staff</a></li> <b>·</b>
-                            <li><a href="#syllabus" class="inheritcolor">Course info</a></li> <b>·</b>
-                            <li><a href="https://bostoncollege.instructure.com/courses/1625387" class="inheritcolor">Canvas</a></li>
-				        </ul>
-					</nav>
-          
-				<!-- Main -->
-					<div id="main">
+
+        <!-- Nav -->
+            <nav id="nav">
+                <ul>							
+                    <li><a href="#overview" class="inheritcolor">Overview</a></li> <b>·</b>
+                    <li><a href="#schedule" class="inheritactive">Schedule</a></li> <b>·</b>
+                    <li><a href="#staff" class="inheritcolor">Staff</a></li> <b>·</b>
+                    <li><a href="#syllabus" class="inheritcolor">Course info</a></li> <b>·</b>
+                    <li><a href="https://bostoncollege.instructure.com/courses/1625387" class="inheritcolor">Canvas</a></li>
+                </ul>
+            </nav>
+
+
+        <!-- Main -->
+            <div id="main">
             <section id="note" class="main special">
-              <br>
+         <!-- Introduction -->
+            <section id="overview" class="main">
+              <center>
+                <header class="major">
+                  <h2>Overview</h2>
+				</header>
+                <div class="spotlight" style="width: 90%; text-align: left">
+                    <div class="content">
+                    <p>CSCI 3343 is an advanced undergraduate-level
+                    computer vision class, covering a wide range of topics with the <b>deep learning</b> approach.
+                    To build up the <b>hand-on</b> experience,
+                    we'll have one weekly coding lab and one semester-long final project aiming for the <b>research publication</b> or <b>real-world deployment</b>.
+                    </p>         
+                    </div>
+                </div>
+                </center>
+            </section>
             <section id="schedule" class="main special">
               <center>
                 <header class="major">
                   <h2>Schedule</h2>
                 </header>
-                  <div class="table-wrapper" style="width:90%">
+                  <div class="table-wrapper" style="width:100%;margin:auto;">
                     <font style="font-size: 16px">
                         <table class="alt">
-												<tbody>
-                          </tbody><colgroup><col width="8%">
-                          <col width="12%">
-                          <col width="25%">
-                          </colgroup><thead>
+						  <tbody>
+                          </tbody><colgroup>
+                              <col width="12%">
+                              <col width="12%">
+                              <col width="24%">
+                              <col width="32%">
+                              <col width="12%">
+                          </colgroup>
+                          <thead>
                             <tr>
-                              <th style="text-align:center">Lecture</th>
+                              <th style="text-align:center">Theme</th>
                               <th style="text-align:center">Date</th>
                               <th style="text-align:center">Topic</th>
                               <th style="text-align:center">Materials</th>
@@ -86,17 +107,19 @@
                                 font-family: HelveticaNeue;
                                 font-weight: 600;
                             }
-                            
+                             td.topic2 {
+                                font-style: italic;
+                                font-weight: 200;
+                            }
                           </style>
 
     <!-- Start schedule -->
     <tbody>
       <tr class="alternate">
-        <td>Lec. 1</td>
-        <td>Mon, Aug. 31</td>
-        <td class="topic">A simple vision system
+          <td></td>
+        <td>Mon, Aug. 30</td>
+        <td class="topic">Lec. 1: Introduction
           <div class="subtopic">About the course
-            <br>Cameras
             <br>Simple edge detection</div>
         </td>
         <td>
@@ -105,12 +128,13 @@
             <li><a href="http://6.869.csail.mit.edu/fa19/lectures/chapter1.pdf">Torralba, Freeman, and Isola: A Simple Visual System (optional)</a></li>
           </ul>
         </td>
-        <td><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps1.pdf">ps1 out (filtering)</a></td>
+        <td><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps0.pdf">ps0 out (maths)</a>
+            <a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps1.pdf"><font color=#800000>final project out (ideas)</font></a></td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 2</td>
-        <td>Wed, Sep. 2 </td>
-        <td class="topic">Image filters
+          <td rowspan=5 style="vertical-align:middle;text-align:center;">Optics<br/>(Week 1-2) </td>
+        <td>Wed, Sep. 1 </td>
+        <td class="topic">Lec. 2: Image Formation
           <div class="subtopic">Convolution
             <br>Gradient filters
             <br>Blurring</div>
@@ -125,10 +149,9 @@
         <td> </td>
       </tr>
       <tr class="alternate">
-        <td>Sec. 1</td>
-        <td>Fri, Sep. 4 </td>
-        <td class="topic">Linear algebra
-          <div class="subtopic"></div>
+        <td>Fri, Sep. 3 </td>
+        <td class="topic2">Lab 1: Linear Algebra I
+          <div class="subtopic">Eigen face</div>
         </td>
         <td>
           <ul class="materials">
@@ -136,19 +159,15 @@
             <li><a href="https://colab.research.google.com/drive/1uqO9yDmUL19z6el-vmz6j5eVUK1jfIXa?usp=sharing">Colab Notebook</a></li>
           </ul>
         </td>
-        <td> </td>
+        <td>ps0 due
+          <br/><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps2.pdf">ps1 out (optics)</a> </td>
       </tr>
       <tr class="alternate">
-        <td></td>
-        <td>Mon, Sep. 7 </td>
-        <td class="topic">No class</td>
-        <td></td>
-        <td></td>
+        <td colspan=4 align=center bgcolor="#9de0ad">No Class (Labor Day)</td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 3</td>
-        <td>Wed, Sep. 9 </td>
-        <td class="topic">Nonlinear filtering
+        <td>Wed, Sep. 8 </td>
+        <td class="topic">Lec. 3: Modern Camera
           <div class="subtopic">Laplacian
             <br>Hybrid images
             <br>Template matching
@@ -161,13 +180,12 @@
             <li><a href="https://people.csail.mit.edu/sparis/bf_course/course_notes.pdf">Paris et al., bilateral filtering intro (optional)</a></li>
           </ul>
         </td>
-        <td> </td>
+        <td></td>
       </tr>
       <tr class="alternate">
-        <td>Sec. 2</td>
-        <td>Fri, Sep. 11</td>
-        <td class="topic">More linear algebra
-          <div class="subtopic"></div>
+        <td>Fri, Sep. 10</td>
+        <td class="topic2">Lab 2: Linear Algebra II
+          <div class="subtopic">Image transformation</div>
         </td>
         <td>
           <ul class="materials">
@@ -177,11 +195,11 @@
         <td> </td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 4</td>
-        <td>Mon, Sep. 14</td>
-        <td class="topic">Frequencies
-          <div class="subtopic">Image statistics
-            <br>Fourier transform</div>
+        <td rowspan=3 style="vertical-align:middle;text-align:center;">Signal Processing <br/>(Week 3)</td>
+        <td>Mon, Sep. 13</td>
+        <td class="topic">Lec. 4: Filtering I
+            <div class="subtopic">Linear filters
+                <br/>Non-linear filters</div>
         </td>
         <td>
           <ul class="materials">
@@ -190,16 +208,15 @@
             <li><a href="http://6.869.csail.mit.edu/fa19/lectures/notes_lecture4.pdf">Torralba, Freeman, and Isola: Fourier Analysis</a></li>
           </ul>
         </td>
-        <td> </td>
+        <td>ps1 due
+          <br/><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps2.pdf">ps2 out (signal)</a>
+        </td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 5</td>
-        <td>Wed, Sep. 16</td>
-        <td class="topic">Image pyramids
-          <div class="subtopic">Gaussian pyramid
-            <br>Laplacian pyramid
-            <br>Resampling
-            <br>
+        <td>Wed, Sep. 15</td>
+        <td class="topic">Lec. 5: Filtering II
+          <div class="subtopic">Fourier transform
+            <br>Image pyramid
           </div>
         </td>
         <td>
@@ -208,13 +225,11 @@
             <li><a href="http://szeliski.org/Book/">Szeliski Chapter 3.5</a></li>
           </ul>
         </td>
-        <td>ps1 due
-          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps2.pdf">ps2 out (frequency)</a></td>
+        <td></td>
       </tr>
       <tr class="alternate">
-        <td>Sec. 3</td>
         <td>Fri, Sep. 18</td>
-        <td class="topic">Fourier tutorial
+        <td class="topic2">Lab 3: Image Blending
           <div class="subtopic"></div>
         </td>
         <td>
@@ -225,12 +240,11 @@
         <td> </td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 6</td>
+        <td rowspan=9 style="vertical-align:middle;text-align:center;">Machine Learning<br/>(Week 4-6)</td>
         <td>Mon, Sep. 21</td>
-        <td class="topic">Machine learning
-          <div class="subtopic">Nearest Neighbor
-            <br>Linear regression
-            <br>Overfitting</div>
+        <td class="topic">Lec. 6: Machine Learning I
+          <div class="subtopic">Basics
+            <br>Nearest-neighbor</div>
         </td>
         <td>
           <ul class="materials">
@@ -239,27 +253,25 @@
             <li><a href="http://www.deeplearningbook.org/contents/ml.html">Goodfellow Chapter 5, ML basics (optional)</a></li>
           </ul>
         </td>
-        <td> </td>
+        <td>ps2 due
+          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps3.pdf">ps3 out (intro to ML)</a>  </td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 7</td>
-        <td>Wed, Sep. 23</td>
-        <td class="topic">Linear classifiers
-          <div class="subtopic">Logistic regression
-            <br>Stochastic gradient descent</div>
+        <td>Wed, Sep. 22</td>
+        <td class="topic">Lec. 7: Machine Learning II
+          <div class="subtopic">Linear models
+            <br>Gradient descent</div>
         </td>
         <td>
           <ul class="materials">
             <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec7-linear.pdf">Slides</a></li>
           </ul>
         </td>
-        <td>ps2 due
-          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps3.pdf">ps3 out (intro to ML)</a></td>
+        <td></td>
       </tr>
       <tr class="alternate">
-        <td>Sec. 4</td>
-        <td>Fri, Sep. 25</td>
-        <td class="topic">Learning tutorial
+        <td>Fri, Sep. 24</td>
+        <td class="topic2">Lab 4: PyTorch I
           <div class="subtopic"></div>
         </td>
         <td>
@@ -270,12 +282,10 @@
         <td> </td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 8</td>
-        <td>Mon, Sep. 28</td>
-        <td class="topic">Neural networks
+        <td>Mon, Sep. 27</td>
+        <td class="topic">Lec. 8: Neural Networks I
           <div class="subtopic">Nonlinearities
-            <br>Network structure
-            <br>Regularization</div>
+            <br>Network structure</div>
         </td>
         <td>
           <ul class="materials">
@@ -283,12 +293,12 @@
             <li>Szeliski 5.3</li>
           </ul>
         </td>
-        <td> </td>
+        <td>ps3 due
+          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps4.pdf">ps4 out (backpropagation)</a></td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 9&lt;</td>
-        <td>Wed, Sep. 30</td>
-        <td class="topic">Optimization
+        <td>Wed, Sep. 29</td>
+        <td class="topic">Lec. 9: Neural Networks II
           <div class="subtopic">Computation graphs
             <br>Backpropagation
             <br>Momentum</div>
@@ -303,13 +313,11 @@
             <li><a href="http://www.cs.toronto.edu/~rgrosse/courses/csc421_2019/readings/L06%20Automatic%20Differentiation.pdf">R. Grosse automatic differentiation notes</a></li>
           </ul>
         </td>
-        <td>ps3 due
-          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps4.pdf">ps4 out (backpropagation)</a></td>
+        <td></td>
       </tr>
       <tr class="alternate">
-        <td>Sec. 5</td>
-        <td>Fri, Oct. 2</td>
-        <td class="topic">PyTorch tutorial
+        <td>Fri, Oct. 1</td>
+        <td class="topic2">Lab 5: PyTorch II
           <div class="subtopic"></div>
         </td>
         <td>
@@ -320,9 +328,8 @@
         <td></td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 10</td>
-        <td>Mon, Oct. 5 </td>
-        <td class="topic">Convolutional networks
+        <td>Mon, Oct. 4 </td>
+        <td class="topic">Lec. 10: Convolutional Networks
           <div class="subtopic">Convolution layers
             <br>Pooling
             <br>Normalization</div>
@@ -336,39 +343,75 @@
             <li><a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf">ResNet paper</a></li>
           </ul>
         </td>
-        <td> </td>
+        <td><a href="https://docs.google.com/spreadsheets/d/166chRT2QaysaEUtOjSzL4z8yWFWa1nYCyPdoVzrafjM/edit?usp=sharing"><font color=#800000>final project due (team info)</a></font> 
+            <br/>ps4 due
+            <br/><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps5.pdf">ps5 out (cnn)</a>
+        </td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 11</td>
-        <td>Wed, Oct. 7 </td>
-        <td class="topic">Scene understanding
-          <div class="subtopic">Scene recognition
-            <br>Semantic segmentation</div>
+        <td>Wed, Oct. 6 </td>
+        <td class="topic">Lec. 11: Good Practices
+          <div class="subtopic">Training
+            <br>Debugging</div>
         </td>
         <td>
           <ul class="materials">
             <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec11-scene.pdf">Slides</a></li>
           </ul>
         </td>
-        <td>ps4 due
-          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps5.pdf">ps5 out (scene recognition)</a></td>
+        <td></td>
       </tr>
       <tr class="alternate">
-        <td>Sec. 6</td>
         <td>Fri, Oct. 9</td>
-        <td class="topic">Office hours
+        <td class="topic2">Lab 6:
           <div class="subtopic"></div>
         </td>
         <td></td>
         <td> </td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 12</td>
-        <td>Mon, Oct. 12</td>
-        <td class="topic">Object detection
-          <div class="subtopic">Sliding window
-            <br>Region-based CNNs
-            <br>Instance segmentation</div>
+          <td rowspan=7 style="vertical-align:middle;text-align:center;">Image Understanding<br/>(Week 7-8)</td>
+        <td colspan=4 align=center bgcolor="#9de0ad">No Class (Fall Break)
+          <div class="subtopic"></div>
+        </td>
+      </tr>
+      <tr class="alternate">
+        <td>Tue, Oct. 12</td>
+        <td class="topic">Lec. 12: Image-level Prediction
+          <div class="subtopic">Texture synthesis
+            <br>GANs
+            <br>Conditional GANs</div>
+        </td>
+        <td>
+        </td>
+        <td>ps5 due</td>
+      </tr>
+
+      <tr class="alternate">
+        <td>Wed, Oct. 13</td>
+        <td class="topic">Lec. 13: Pixel-level Prediction
+          <div class="subtopic">Texture synthesis
+            <br>GANs
+            <br>Conditional GANs</div>
+        </td>
+        <td>
+        </td>
+        <td></td>
+      </tr>
+      <tr class="alternate">
+        <td>Fri, Oct. 15</td>
+        <td class="topic2">Lab 7:
+          <div class="subtopic"></div>
+        </td>
+        <td></td>
+        <td> </td>
+      </tr>
+      <tr class="alternate">
+        <td>Mon, Oct. 18</td>
+        <td class="topic">Lec. 14: Object Detection
+          <div class="subtopic">3D CNNs
+            <br>RNNs
+            <br>Attention</div>
         </td>
         <td>
           <ul class="materials">
@@ -377,60 +420,14 @@
             <li><a href="https://arxiv.org/abs/1703.06870">Mask R-CNN paper</a></li>
           </ul>
         </td>
-        <td> </td>
+        <td><a href="https://docs.google.com/spreadsheets/d/166chRT2QaysaEUtOjSzL4z8yWFWa1nYCyPdoVzrafjM/edit?usp=sharing"><font color=#800000>final project due (proposal)</a></font>
+        <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps7.pdf">ps6 out (object detection)</a> 
+        </td>
+
       </tr>
       <tr class="alternate">
-        <td>Lec. 13</td>
-        <td>Wed, Oct. 14</td>
-        <td class="topic">Image synthesis
-          <div class="subtopic">Texture synthesis
-            <br>GANs
-            <br>Conditional GANs</div>
-        </td>
-        <td>
-          <ul class="materials">
-            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec12-imagesynth.pdf">Slides</a></li>
-            <li><a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf">Gatys et al. style transfer paper</a></li>
-            <li><a href="https://arxiv.org/pdf/1406.2661.pdf">GAN paper</a></li>
-            <li><a href="https://phillipi.github.io/pix2pix/">pix2pix paper</a></li>
-            <li><a href="https://junyanz.github.io/CycleGAN/">CycleGAN paper</a></li>
-          </ul>
-        </td>
-        <td>ps5 due
-          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps6.pdf">ps6 out (image synthesis)</a> </td>
-      </tr>
-      <tr class="alternate">
-        <td>Sec. 7</td>
-        <td>Fri, Oct. 16</td>
-        <td class="topic">Office hours
-          <div class="subtopic"></div>
-        </td>
-        <td></td>
-        <td> </td>
-      </tr>
-      <tr class="alternate">
-        <td>Lec. 14</td>
-        <td>Mon, Oct. 19</td>
-        <td class="topic">Temporal models
-          <div class="subtopic">3D CNNs
-            <br>RNNs
-            <br>Attention</div>
-        </td>
-        <td>
-          <ul class="materials">
-            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec14-action.pdf">Slides</a></li>
-            <li><a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">LSTM tutorial by C. Olah</a></li>
-            <li><a href="https://www.deeplearningbook.org/contents/rnn.html">Goodfellow 10</a></li>
-          </ul>
-        </td>
-        <td>
-          <!-- <tr class = "alternate"><td>Lec. 15</td><td>Wed, Oct. 21</td><td class = "topic">Representation learning<div class = "subtopic">Transfer learning<br>Autoencoders<br>Self-supervision</div></td><td><td>ps6 due<br><a href = "psets/ps7.pdf">ps7 out (object detection)</a> -->
-        </td>
-      </tr>
-      <tr class="alternate">
-        <td>Lec. 14</td>
-        <td>Wed, Oct. 21</td>
-        <td class="topic">Language
+        <td>Wed, Oct. 20</td>
+        <td class="topic">Lec. 15: Image Synthesis
           <div class="subtopic">Autoregressive models
             <br>Attention
             <br>Captioning
@@ -439,42 +436,46 @@
         </td>
         <td>
           <ul class="materials">
-            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec15-language.pdf">Slides</a></li>
-              <!-- <li>Szeliski 6.6 --></li>
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec12-imagesynth.pdf">Slides</a></li>
+            <li><a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf">Gatys et al. style transfer paper</a></li>
+            <li><a href="https://arxiv.org/pdf/1406.2661.pdf">[GAN paper]</a>, 
+                <a href="https://phillipi.github.io/pix2pix/">pix2pix paper</a>, 
+                <a href="https://junyanz.github.io/CycleGAN/">CycleGAN paper</a></li>
           </ul>
         </td>
-        <td>ps6 due
-          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps7.pdf">ps7 out (object detection)</a> </td>
+        <td></td>
       </tr>
       <tr class="alternate">
-        <td>Sec. 8</td>
-        <td>Fri, Oct. 23</td>
-        <td class="topic">Office hours
+        <td>Fri, Oct. 22</td>
+        <td class="topic2">Lab 8:
           <div class="subtopic"></div>
         </td>
         <td></td>
         <td> </td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 16</td>
-        <td>Mon, Oct. 26</td>
-        <td class="topic">Representation learning
-          <div class="subtopic">Transfer learning
-            <br>Autoencoders
-            <br>Self-supervision</div>
+        <td rowspan=3 style="vertical-align:middle;text-align:center;">Video Understanding<br/>(Week 9)</td>
+        <td>Mon, Oct. 25</td>
+        <td class="topic">Lec. 16: Motion
+          <div class="subtopic">Optical flow
+            <br>Temporal models</div>
         </td>
         <td>
           <ul class="materials">
-            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec16-representation.pdf">Slides</a></li>
+            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec14-action.pdf">Slides</a></li>
+            <li><a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">LSTM tutorial by C. Olah</a></li>
+            <li><a href="https://www.deeplearningbook.org/contents/rnn.html">Goodfellow 10</a></li>
           </ul>
         </td>
-        <td> </td>
+
+        <td> ps6 due
+            <br/> <a>ps7 out (video)</a></td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 17</td>
-        <td>Wed, Oct. 28</td>
-        <td class="topic">Multimodal learning
-          <div class="subtopic"></div>
+        <td>Wed, Oct. 27</td>
+        <td class="topic">Lec. 17: Object Tracking
+          <div class="subtopic">
+          </div>
         </td>
         <td>
           <ul class="materials">
@@ -482,42 +483,36 @@
             <li><a href="https://www.youtube.com/watch?v=G-lN8vWm3m0">McGurk effect video</a></li>
           </ul>
         </td>
-        <td><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/proposal.pdf">proposal info out</a> </td>
+        <td></td>
       </tr>
       <tr class="alternate">
-        <td>Sec. 9</td>
-        <td> Fri, Oct. 30</td>
-        <td class="topic">Project office hours
+        <td> Fri, Oct. 29</td>
+        <td class="topic2">Lab 9:
           <div class="subtopic"></div>
         </td>
         <td></td>
         <td> </td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 17</td>
-        <td>Mon, Nov. 2</td>
-        <td class="topic">Image formation
-          <div class="subtopic">Plenoptic function
-            <br>Pinhole cameras
-            <br>Homogeneous coordinates
-            <br>Projection matrix</div>
+        <td rowspan=6 style="vertical-align:middle;text-align:center;">3D Understanding<br/>(Week 10-11)</td>
+        <td>Mon, Nov. 1</td>
+        <td class="topic">Lec. 18: Image Stitching
+          <div class="subtopic">SIFT
+            <br>RANSAC</div>
         </td>
         <td>
           <ul class="materials">
             <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec18-imageformation.pdf">Slides</a></li>
           </ul>
         </td>
-        <td>
-          <!-- <a href = "psets/ps8.pdf">ps8 out (representation learning)</a> --></td>
+        <td>ps7 due
+          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps7.pdf">ps8 out (3d)</a> 
       </tr>
       <tr class="alternate">
-        <td>Lec. 18</td>
-        <td>Wed, Nov. 4 </td>
-        <td class="topic">Multi-view geometry
-          <div class="subtopic">Triangulation
-            <br>Epipolar lines
-            <br>Homographies
-            <br>Warping</div>
+        <td>Wed, Nov. 3 </td>
+        <td class="topic">Lec. 19: 3D Reconstruction
+          <div class="subtopic">Stereo
+            <br>Structure from Motion</div>
         </td>
         <td>
           <ul class="materials">
@@ -526,39 +521,36 @@
             <li><a href="https://www.robots.ox.ac.uk/~vgg/hzbook/hzbook2/HZepipolar.pdf">Hartley and Zisserman: epipolar geometry</a></li>
           </ul>
         </td>
-        <td>ps7 due
-          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps8.pdf">ps8 out (self-supervised learning)</a> </td>
+        <td></td>
       </tr>
       <tr class="alternate">
-        <td>Sec. 10</td>
-        <td>Fri, Nov. 6 </td>
-        <td class="topic">Project office hours
+        <td>Fri, Nov. 5 </td>
+        <td class="topic2">Lab 10:
           <div class="subtopic"></div>
         </td>
         <td></td>
         <td> </td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 19</td>
-        <td>Mon, Nov. 9 </td>
-        <td class="topic">Fitting geometric models
-          <div class="subtopic">Feature matching
-            <br>RANSAC</div>
+        <td>Mon, Nov. 8 </td>
+        <td class="topic">Lec. 20: 3D Representation
+          <div class="subtopic">Point Cloud
+              <br/>Mesh
+              <br/>NeRF</div>
         </td>
         <td>
           <ul class="materials">
             <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec20-reconstruction.pdf">Slides</a></li>
           </ul>
         </td>
-        <td><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/final-guidelines.pdf">final project guidelines</a> </td>
+        <td>ps8 due</td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 20</td>
-        <td>Wed, Nov. 11</td>
-        <td class="topic">3D reconstruction
-          <div class="subtopic">Structure from motion
-            <br>Multi-view stereo
-            <br>Stereo algorithms
+        <td>Wed, Nov. 10</td>
+        <td class="topic">Lec. 21: 3D Labeling
+          <div class="subtopic">Lidar
+            <br>Landmark
+            <br>Frozen people
             <br>
           </div>
         </td>
@@ -567,13 +559,11 @@
             <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec21-sfm.pdf">Slides</a></li>
           </ul>
         </td>
-        <td>ps8 due
-          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps9.pdf">ps9 out (panoramic stitching)</a> </td>
+        <td></td>
       </tr>
       <tr class="alternate">
-        <td>Sec. 11</td>
-        <td>Fri, Nov. 13</td>
-        <td class="topic">Geometry tutorial
+        <td>Fri, Nov. 12</td>
+        <td class="topic2">Lab 11:
           <div class="subtopic"></div>
         </td>
         <td>
@@ -584,9 +574,9 @@
         <td></td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 21</td>
-        <td>Mon, Nov. 16</td>
-        <td class="topic">Color <font style="font-weight: normal">(Lecturer: Haozhu Wang)</font>
+        <td rowspan=3 style="vertical-align:middle;text-align:center;">Biomedical Applications<br/>(Week 12)</td>
+        <td>Mon, Nov. 15</td>
+        <td class="topic">Color 
           <div class="subtopic">Color perception
             <br>Color constancy</div>
         </td>
@@ -595,10 +585,9 @@
             <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec21-color.pdf">Slides</a></li>
           </ul>
         </td>
-        <td></td>
+        <td><font color=#800000>final project due (mid-term report)</font></td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 22</td>
         <td>Wed, Nov. 18</td>
         <td class="topic">Motion
           <div class="subtopic">Optical flow
@@ -610,84 +599,95 @@
             <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec22-motion.pdf">Slides</a></li>
           </ul>
         </td>
-        <td>ps9 due
-          <br>project proposal due
-          <br><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/psets/ps10.pdf">ps10 out (motion)</a> </td>
+        <td></td>
       </tr>
       <tr class="alternate">
-        <td>Sec. 12</td>
-        <td>Fri, Nov. 20</td>
-        <td class="topic">Project office hours
+        <td>Fri, Nov. 19</td>
+        <td class="topic2">Lab 12:
           <div class="subtopic"></div>
         </td>
         <td></td>
         <td> </td>
       </tr>
       <tr class="alternate">
-        <td colspan="5" class="topic">
-          <center>Thanksgiving break</center>
-        </td>
-      </tr>
-      <tr class="alternate">
-        <td>Lec. 23</td>
-        <td>Mon, Nov. 30</td>
-        <td class="topic">Light and shading
-          <div class="subtopic">Shape from shading
-            <br>Photometric stereo
-            <br>Intrinsic images</div>
+        <td rowspan=5 style="vertical-align:middle;text-align:center;">Frontiers in Vision<br/>(Week 13-14)
+</td>
+        <td>Mon, Nov. 22</td>
+        <td class="topic">Guest I: 
+          <div class="subtopic"></div>
         </td>
         <td>
           <ul class="materials">
-            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec23-light.pdf">Slides</a></li>
           </ul>
         </td>
-        <td>
-          <!-- <tr class = "alternate"><td></td><td>Wed, Nov. 25</td><td class = "topic">Thanksgiving break<td><td></tr> -->
-          <!-- <tr class = "alternate"><td></td><td>Fri, Nov. 27</td><td class = "topic">Thanksgiving break<td><td></tr> -->
-          <!-- <tr class = "alternate"><td>Lec. 24</td><td>Mon, Nov. 23</td><td class = "topic">Embodied vision<div class = "subtopic">Learning from demonstrations<br>Reinforcement learning</div></td><td><td> -->
-          <!-- <tr class = "alternate"><td>Lec. 25</td><td>Wed, Nov. 25</td><td class = "topic">Bias<div class = "subtopic">Datasets<br>Fairness<br></div></td><td><td> -->
-          <!-- <tr class = "alternate"><td>Sec. 13</td><td>Fri, Nov. 27</td><td class = "topic">Project office hours<div class = "subtopic"></div></td><td><td> -->
+        <td><font color=#800000>final project due (draft slide)</font>
         </td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 24 </td>
-        <td>Wed, Dec. 2</td>
-        <td class="topic">Embodied vision
-          <div class="subtopic">Learning from demonstrations
-            <br>Reinforcement learning</div>
-          <!--3-->
+        <td align=center colspan="4" bgcolor="#9de0ad">No Class (Thanksgiving Break)</td>
+      </tr>
+      <tr class="alternate">
+        <td>Mon, Nov. 29</td>
+        <td class="topic">Guest II:
+          <div class="subtopic"></div>
         </td>
         <td>
           <ul class="materials">
-            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec24-embodied.pdf">Slides</a></li>
+          </ul>
+        </td>
+        <td> </td>
+      </tr>
+
+      <tr class="alternate">
+        <td>Wed, Dec. 1</td>
+        <td class="topic">Guest III:
+          <div class="subtopic"></div>
+        </td>
+        <td>
+          <ul class="materials">
           </ul>
         </td>
         <td> </td>
       </tr>
       <tr class="alternate">
-        <td>Sec. 14 </td>
-        <td>Fri, Dec. 4</td>
-        <td class="topic">Project office hours
+        <td>Fri, Dec. 3</td>
+        <td class="topic">Guest IV:
           <div class="subtopic"> </div>
         </td>
         <td></td>
         <td></td>
       </tr>
       <tr class="alternate">
-        <td>Lec. 28</td>
-        <td>Mon, Dec. 7</td>
-        <td class="topic">Bias and fake images
+        <td rowspan=6 style="vertical-align:middle;text-align:center;">Final Projects<br/>(Week 15)</td>
+        <td>Mon, Dec. 6</td>
+        <td class="topic">Presentation I
           <div class="subtopic"></div>
         </td>
-        <td>
-          <ul class="materials">
-            <li><a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/lec/lec25-bias.pdf">Slides</a></li>
-          </ul>
+        <td></td>
+        <td><font color=#800000>final project due (final slide)</font>
         </td>
-        <td> ps10 due </td>
       </tr>
-    </tbody>
+      <tr class="alternate">
+        <td>Wed, Dec. 8</td>
+        <td class="topic">Presentation II
+          <div class="subtopic"></div>
+        </td>
+        <td></td><td></td>
+      </tr>
+      <tr class="alternate">
+        <td>Fri, Dec. 10</td>
+        <td class="topic">Presentation III
+          <div class="subtopic"></div>
+        </td>
+        <td></td><td></td>
+      </tr>
+      <tr class="alternate">
+        <td>Mon, Dec. 13</td>
+        <td></td>
+        <td></td><td><font color=#800000>final project due (final report/code)</font></td>
+      </tr>
 
+    </tbody>
 </table>
 <!-- End schedule -->
                     </font>
@@ -768,28 +768,17 @@
                  a member of the course staff. </div>
                  <br><br>
                </div>
-               
-						</center></section>
+			</center></section>
             
             <!-- Introduction -->
             <section id="syllabus" class="main">
               <center>
                 <header class="major">
                   <h2>Course information</h2>
-							  </header>
-								<div class="spotlight" style="width: 90%; text-align: left">
-									<div class="content">
-                    <p>EECS 442 is an advanced undergraduate-level
-                      computer vision class. Class topics include
-                      low-level vision, object recognition, motion, 3D
-                      reconstruction, basic signal processing, and
-                      deep learning. We'll also touch on very recent
-                      advances, including image synthesis,
-                      self-supervised learning, and embodied
-                      perception.
-                    <br>
-
-                    </p><p><b>Lectures:</b>
+                </header>
+                <div class="spotlight" style="width: 90%; text-align: left">
+                    <div class="content">
+                    <p><b>Lectures:</b>
                       </p><div style="padding-left: 4%; margin-top: -20px">
                       <ul>
                         <li>Lectures will take place in TBD

@@ -45,7 +45,7 @@
                     <li><a href="#schedule" class="inheritactive">Schedule</a></li> <b>·</b>
                     <li><a href="#staff" class="inheritcolor">Staff</a></li> <b>·</b>
                     <li><a href="#syllabus" class="inheritcolor">Course info</a></li> <b>·</b>
-                    <li><a href="https://bostoncollege.instructure.com/courses/1625387" class="inheritcolor">Canvas</a></li>
+                    <li><a href="https://bostoncollege.instructure.com/courses/1625387" class="inheritcolor">Canvas</a></li> <b>·</b>
                     <li><a href="https://docs.google.com/document/d/1unjJFWahHPLU6w84o-HWX4htjH9wdJrkWdMaX6R9d-E/edit" class="inheritcolor">Discord</a></li>
                 </ul>
             </nav>
@@ -63,9 +63,9 @@
                 <div class="spotlight" style="width: 90%; text-align: left">
                     <div class="content">
                     <p>CSCI 3343 is an advanced undergraduate-level
-                    computer vision class covering a wide range of topics with the <b>deep learning</b> approach.
-                    To build up the <b>hands-on</b> experience,
-                    We'll have weekly coding labs and <b>one semester-long final project</b> aiming for research publication or real-world deployment.
+                    computer vision class covering a wide range of <b>algorithms and applications <font color=#800000>(week 7-14)</font></b> with the <b>deep learning <font color=#800000>(week 4-6)</font></b> approach.
+                    To build up the hands-on experience,
+                    We'll have weekly coding labs and one <b>semester-long final project</b> aiming for research publication or real-world deployment.
                     </p>         
                     </div>
                 </div>
@@ -117,7 +117,7 @@
     <!-- Start schedule -->
     <tbody>
       <tr class="alternate">
-          <td></td>
+          <td rowspan=9 style="vertical-align:middle;text-align:center;">Image Basics<br/>(Week 1-3) </td>
         <td>Mon, Aug. 30</td>
         <td class="topic">Lec. 1: Introduction
           <div class="subtopic">
@@ -134,7 +134,6 @@
             <a href=""><font color=#800000>final project out (ideas)</font></a></td>
       </tr>
       <tr class="alternate">
-          <td rowspan=5 style="vertical-align:middle;text-align:center;">Optics<br/>(Week 1-2) </td>
         <td>Wed, Sep. 1 </td>
         <td class="topic">Lec. 2: Image Formation
           <div class="subtopic">Pin-hole
@@ -166,13 +165,11 @@
       </tr>
       <tr class="alternate">
         <td>Wed, Sep. 8 </td>
-        <td class="topic">Lec. 3: Modern Camera
+        <td class="topic">Lec. 3: Modern Cameras
           <div class="subtopic"></div>
         </td>
         <td>
           <ul class="materials">
-            <li><a href="http://szeliski.org/Book/">Szeliski, Nonlinear Filtering, Chapter 3.3</a></li>
-            <li><a href="https://people.csail.mit.edu/sparis/bf_course/course_notes.pdf">Paris et al., bilateral filtering intro (optional)</a></li>
           </ul>
         </td>
         <td></td>
@@ -189,16 +186,16 @@
         <td> </td>
       </tr>
       <tr class="alternate">
-        <td rowspan=3 style="vertical-align:middle;text-align:center;">Signal Processing <br/>(Week 3)</td>
+        <!--td rowspan=3 style="vertical-align:middle;text-align:center;">Image Processing <br/>(Week 3)</td-->
         <td>Mon, Sep. 13</td>
-        <td class="topic">Lec. 4: Filtering I
+        <td class="topic">Lec. 4: Image Processing I
             <div class="subtopic">Linear filters
                 <br/>Non-linear filters</div>
         </td>
         <td>
           <ul class="materials">
-            <li><a href="http://szeliski.org/Book/">Szeliski, Fourier Transforms, Chapter 3.4</a></li>
-            <li><a href="http://6.869.csail.mit.edu/fa19/lectures/notes_lecture4.pdf">Torralba, Freeman, and Isola: Fourier Analysis</a></li>
+            <li><a href="http://szeliski.org/Book/">Szeliski, Nonlinear Filtering, Chapter 3.3</a></li>
+            <li><a href="https://people.csail.mit.edu/sparis/bf_course/course_notes.pdf">Paris et al., bilateral filtering intro (optional)</a></li>
           </ul>
         </td>
         <td>ps1 due
@@ -207,13 +204,15 @@
       </tr>
       <tr class="alternate">
         <td>Wed, Sep. 15</td>
-        <td class="topic">Lec. 5: Filtering II
+        <td class="topic">Lec. 5: Image Processing II
           <div class="subtopic">Fourier transform
             <br>Image pyramid
           </div>
         </td>
         <td>
           <ul class="materials">
+            <li><a href="http://szeliski.org/Book/">Szeliski, Fourier Transforms, Chapter 3.4</a></li>
+            <li><a href="http://6.869.csail.mit.edu/fa19/lectures/notes_lecture4.pdf">Torralba, Freeman, and Isola: Fourier Analysis</a></li>
             <li><a href="http://szeliski.org/Book/">Szeliski Chapter 3.5</a></li>
           </ul>
         </td>
@@ -231,7 +230,7 @@
         <td> </td>
       </tr>
       <tr class="alternate">
-        <td rowspan=9 style="vertical-align:middle;text-align:center;">Machine Learning<br/>(Week 4-6)</td>
+        <td rowspan=9 style="vertical-align:middle;text-align:center;">Deep Learning<br/>(Week 4-6)</td>
         <td>Mon, Sep. 21</td>
         <td class="topic">Lec. 6: Machine Learning I
           <div class="subtopic">Basics
@@ -239,7 +238,7 @@
         </td>
         <td>
           <ul class="materials">
-            <li><a href="http://szeliski.org/Book/">Szeliski 5.1 - 5.1.2</a></li>
+            <li><a href="http://szeliski.org/Book/">Szeliski 5.1.1</a></li>
             <li><a href="http://www.deeplearningbook.org/contents/ml.html">Goodfellow Chapter 5, ML basics (optional)</a></li>
           </ul>
         </td>
@@ -254,6 +253,7 @@
         </td>
         <td>
           <ul class="materials">
+            <li><a href="http://szeliski.org/Book/">Szeliski 5.1.3-5.1.4</a></li>
           </ul>
         </td>
         <td></td>
@@ -294,9 +294,9 @@
           <ul class="materials">
             <li>Szeliski 5.3.5-5.3.6</li>
             <li><a href="http://www.deeplearningbook.org/contents/optimization.html">Goodfellow optimization</a></li>
-            <li><a href="http://colah.github.io/posts/2015-08-Backprop/">C. Olah backpropagation notes</a></li>
-            <li><a href="http://www.cs.toronto.edu/~rgrosse/courses/csc421_2019/readings/L07%20Optimization.pdf">R. Grosse optimization notes</a></li>
-            <li><a href="http://www.cs.toronto.edu/~rgrosse/courses/csc421_2019/readings/L06%20Automatic%20Differentiation.pdf">R. Grosse automatic differentiation notes</a></li>
+            <li>C. Olah notes: <a href="http://colah.github.io/posts/2015-08-Backprop/">backpropagation </a></li>
+            <li>R. Grosse's notes: <a href="http://www.cs.toronto.edu/~rgrosse/courses/csc421_2019/readings/L07%20Optimization.pdf">optimization</a>,
+            <a href="http://www.cs.toronto.edu/~rgrosse/courses/csc421_2019/readings/L06%20Automatic%20Differentiation.pdf">auto diff</a></li>
           </ul>
         </td>
         <td></td>
@@ -324,11 +324,11 @@
           <ul class="materials">
             <li>Szeliski 5.4</li>
             <li><a href="http://www.deeplearningbook.org/contents/convnets.html">Goodfellow: Chapter 9, Convolutional networks</a></li>
-            <li><a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">AlexNet paper</a></li>
-            <li><a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf">ResNet paper</a></li>
+            <li>Papers: <a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">AlexNet</a>, 
+                <a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf">ResNet</a></li>
           </ul>
         </td>
-        <td><a href="https://docs.google.com/spreadsheets/d/166chRT2QaysaEUtOjSzL4z8yWFWa1nYCyPdoVzrafjM/edit?usp=sharing"><font color=#800000>final project due (team info)</a></font> 
+        <td><a href="https://docs.google.com/spreadsheets/d/166chRT2QaysaEUtOjSzL4z8yWFWa1nYCyPdoVzrafjM/edit?usp=sharing"><font color=#800000>final project (team info due)</a></font> 
             <br/>ps4 due
             <br/><a href="">ps5 out (cnn)</a>
         </td>
@@ -403,7 +403,7 @@
             <li><a href="https://arxiv.org/abs/1703.06870">Mask R-CNN paper</a></li>
           </ul>
         </td>
-        <td><a href="https://docs.google.com/spreadsheets/d/166chRT2QaysaEUtOjSzL4z8yWFWa1nYCyPdoVzrafjM/edit?usp=sharing"><font color=#800000>final project due (proposal)</a></font>
+        <td><a href="https://docs.google.com/spreadsheets/d/166chRT2QaysaEUtOjSzL4z8yWFWa1nYCyPdoVzrafjM/edit?usp=sharing"><font color=#800000>final project (proposal due)</a></font>
         <br><a href="">ps6 out (object detection)</a> 
         </td>
 

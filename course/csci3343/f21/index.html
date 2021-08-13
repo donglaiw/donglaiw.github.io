@@ -82,8 +82,8 @@
 						  <tbody>
                           </tbody><colgroup>
                               <col width="12%">
-                              <col width="12%">
-                              <col width="24%">
+                              <col width="10%">
+                              <col width="28%">
                               <col width="32%">
                               <col width="12%">
                           </colgroup>
@@ -122,10 +122,11 @@
         <td>Mon, Aug. 30</td>
         <td class="topic">Lec. 1: Introduction
           <div class="subtopic">
-            Course overview
-            <br/>Computer vision overview</div>
+            Computer vision overview
+            <br/>Course overview</div>
         </td>
         <td>
+            <i>Motivation: why I should learn computer vison</i>
           <ul class="materials">
             <li><a href="http://6.869.csail.mit.edu/fa19/lectures/chapter1.pdf">Torralba, Freeman, and Isola: A Simple Visual System (optional)</a></li>
           </ul>
@@ -137,10 +138,11 @@
         <td>Wed, Sep. 1 </td>
         <td class="topic">Lec. 2: Image Formation
           <div class="subtopic">
-              Lighting and BRDF
+              Lighting, BRDF
             <br>Pin-hole camera</div>
         </td>
         <td>
+            <i>Image: digitize the visual world</i>
           <ul class="materials">
             <li><a href="http://6.869.csail.mit.edu/fa19/lectures/notes_lecture4.pdf">Torralba, Freeman, and Isola: Signal processing</a></li>
             <li><a href="http://szeliski.org/Book/">Szeliski Chapter 3.2, page 111</a></li>
@@ -152,8 +154,8 @@
         <td>Fri, Sep. 3 </td>
         <td class="topic2">Lab 1: Python Tutorial
           <div class="subtopic">
-              Colab, Anaconda
-              <br/>Numpy, OpenCV
+              Numpy, OpenCV
+              <br/>Image style transfer
           </div>
         </td>
         <td>
@@ -170,10 +172,11 @@
       <tr class="alternate">
         <td>Wed, Sep. 8 </td>
         <td class="topic">Lec. 3: Modern Cameras
-          <div class="subtopic">Lens
-              <br/>Digital images</div>
+          <div class="subtopic">Lens, digital film
+              <br/>Depth, black hole, electron</div>
         </td>
         <td>
+            <i>Image: digitize the visual world BETTER </i>
           <ul class="materials">
           </ul>
         </td>
@@ -195,11 +198,13 @@
       <tr class="alternate">
         <!--td rowspan=3 style="vertical-align:middle;text-align:center;">Image Processing <br/>(Week 3)</td-->
         <td>Mon, Sep. 13</td>
-        <td class="topic">Lec. 4: Image Processing I
-            <div class="subtopic">Linear filters
-                <br/>Non-linear filters</div>
+        <td class="topic">Lec. 4: Image Processing I (Matrix)
+            <div class="subtopic">
+                Linear/non-linear filters
+                <br/>Edge, blob, texture</div>
         </td>
         <td>
+            <i>Filter: extract useful image representations</i>
           <ul class="materials">
             <li><a href="http://szeliski.org/Book/">Szeliski, Nonlinear Filtering, Chapter 3.3</a></li>
             <li><a href="https://people.csail.mit.edu/sparis/bf_course/course_notes.pdf">Paris et al., bilateral filtering intro (optional)</a></li>
@@ -211,12 +216,14 @@
       </tr>
       <tr class="alternate">
         <td>Wed, Sep. 15</td>
-        <td class="topic">Lec. 5: Image Processing II
-          <div class="subtopic">Fourier transform
-            <br>Image pyramid
+        <td class="topic">Lec. 5: Image Processing II (Frequency)
+          <div class="subtopic">
+              Fourier transform
+            <br>Image resizing/pyramid
           </div>
         </td>
         <td>
+            <i>Filter: image basis (breadth) and recursion (depth)</i>
           <ul class="materials">
             <li><a href="http://szeliski.org/Book/">Szeliski, Fourier Transforms, Chapter 3.4</a></li>
             <li><a href="http://6.869.csail.mit.edu/fa19/lectures/notes_lecture4.pdf">Torralba, Freeman, and Isola: Fourier Analysis</a></li>
@@ -240,10 +247,11 @@
         <td rowspan=9 style="vertical-align:middle;text-align:center;">Deep Learning<br/>(Week 4-6)</td>
         <td>Mon, Sep. 21</td>
         <td class="topic">Lec. 6: Machine Learning I
-          <div class="subtopic">Formalism
-            <br>Models: nearest-neighbor, linear</div>
+          <div class="subtopic">Machine learning overview
+            <br>Linear regression</div>
         </td>
         <td>
+            <i>AlexNet: linear layer</i>
           <ul class="materials">
             <li><a href="http://szeliski.org/Book/">Szeliski 5.1.1</a></li>
             <li><a href="http://www.deeplearningbook.org/contents/ml.html">Goodfellow Chapter 5, ML basics (optional)</a></li>
@@ -255,10 +263,11 @@
       <tr class="alternate">
         <td>Wed, Sep. 22</td>
         <td class="topic">Lec. 7: Machine Learning II
-          <div class="subtopic">Loss function
-            <br>Gradient descent</div>
+          <div class="subtopic">Logistic regression
+            <br>Loss function, gradient descent</div>
         </td>
         <td>
+            <i>AlexNet: loss layer</i>
           <ul class="materials">
             <li><a href="http://szeliski.org/Book/">Szeliski 5.1.3-5.1.4</a></li>
           </ul>
@@ -279,10 +288,11 @@
       <tr class="alternate">
         <td>Mon, Sep. 27</td>
         <td class="topic">Lec. 8: Neural Networks I
-          <div class="subtopic">Nonlinearities
-            <br>Network structure</div>
+          <div class="subtopic">Handcrafted features
+            <br>Activation functions</div>
         </td>
         <td>
+            <i>AlexNet: fully-connected layer</i>
           <ul class="materials">
             <li>Szeliski 5.3</li>
           </ul>
@@ -295,9 +305,10 @@
         <td class="topic">Lec. 9: Neural Networks II
           <div class="subtopic">Computation graphs
             <br>Backpropagation
-            <br>Momentum</div>
+            <br>Momentum and ADAM</div>
         </td>
         <td>
+            <i>AlexNet: optimization</i>
           <ul class="materials">
             <li>Szeliski 5.3.5-5.3.6</li>
             <li><a href="http://www.deeplearningbook.org/contents/optimization.html">Goodfellow optimization</a></li>
@@ -323,16 +334,15 @@
       <tr class="alternate">
         <td>Mon, Oct. 4 </td>
         <td class="topic">Lec. 10: Convolutional Networks
-          <div class="subtopic">Convolution layers
-            <br>Pooling
-            <br>Normalization</div>
+          <div class="subtopic">Convolution and pooling layers
+            <br>Normalization and dropout layers</div>
         </td>
         <td>
+            <i>AlexNet: layers for efficient learning from images </i>
           <ul class="materials">
             <li>Szeliski 5.4</li>
             <li><a href="http://www.deeplearningbook.org/contents/convnets.html">Goodfellow: Chapter 9, Convolutional networks</a></li>
-            <li>Papers: <a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">AlexNet</a>, 
-                <a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf">ResNet</a></li>
+            <li>Papers: <a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">AlexNet</a></li>
           </ul>
         </td>
         <td><a href="https://docs.google.com/spreadsheets/d/166chRT2QaysaEUtOjSzL4z8yWFWa1nYCyPdoVzrafjM/edit?usp=sharing"><font color=#800000>final project (team info due)</a></font> 
@@ -342,12 +352,14 @@
       </tr>
       <tr class="alternate">
         <td>Wed, Oct. 6 </td>
-        <td class="topic">Lec. 11: Good Practices
-          <div class="subtopic">Training
-            <br>Debugging</div>
+        <td class="topic">Lec. 11: Modern Network Architectures
+          <div class="subtopic">Filter design
+            <br>Residual and attention module</div>
         </td>
         <td>
+            <i>Beyond AlexNet: five more tricks to crack ImageNet</i>
           <ul class="materials">
+              <li>Papers: <a href="https://arxiv.org/abs/1409.1556">VGG-Net</a>, <a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf">ResNet</a>,  <a href="https://arxiv.org/abs/1709.01507">SE-Net</a>
           </ul>
         </td>
         <td></td>
@@ -369,11 +381,11 @@
       <tr class="alternate">
         <td>Tue, Oct. 12</td>
         <td class="topic">Lec. 12: Image-level Prediction
-          <div class="subtopic">Texture synthesis
-            <br>GANs
-            <br>Conditional GANs</div>
+          <div class="subtopic">Image labels
+            <br>Scene understanding</div>
         </td>
         <td>
+            Target: scalar label
         </td>
         <td>ps5 due</td>
       </tr>
@@ -381,11 +393,11 @@
       <tr class="alternate">
         <td>Wed, Oct. 13</td>
         <td class="topic">Lec. 13: Pixel-level Prediction
-          <div class="subtopic">Texture synthesis
-            <br>GANs
-            <br>Conditional GANs</div>
+          <div class="subtopic">Dense image representation
+            <br>Semantic segmentation</div>
         </td>
         <td>
+            Target: dense grid label
         </td>
         <td></td>
       </tr>
@@ -400,11 +412,11 @@
       <tr class="alternate">
         <td>Mon, Oct. 18</td>
         <td class="topic">Lec. 14: Object Detection
-          <div class="subtopic">3D CNNs
-            <br>RNNs
-            <br>Attention</div>
+          <div class="subtopic">Region-based CNN
+            <br>Instance segmentation</div>
         </td>
         <td>
+            Target: sparse bounding box label
           <ul class="materials">
             <li>Szeliski 6.3</li>
             <li><a href="https://arxiv.org/abs/1703.06870">Mask R-CNN paper</a></li>
@@ -418,13 +430,12 @@
       <tr class="alternate">
         <td>Wed, Oct. 20</td>
         <td class="topic">Lec. 15: Image Synthesis
-          <div class="subtopic">Autoregressive models
-            <br>Attention
-            <br>Captioning
-            <br>
+          <div class="subtopic">Texture and image generation
+            <br>GAN and conditional GAN
           </div>
         </td>
         <td>
+            Target: natural images
           <ul class="materials">
             <li><a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf">Gatys et al. style transfer paper</a></li>
             <li><a href="https://arxiv.org/pdf/1406.2661.pdf">[GAN paper]</a>, 
@@ -463,7 +474,7 @@
         <td class="topic">Lec. 17: Temporal Prediction
           <div class="subtopic">
               Action recognition
-              <br/> RNNs
+              <br/> 3D CNN and RNNs
           </div>
         </td>
         <td>
@@ -553,8 +564,7 @@
       <tr class="alternate">
         <td>Mon, Nov. 15 </td>
         <td class="topic">Lec. 20: 3D Representation
-          <div class="subtopic">Point Cloud
-              <br/>Mesh
+          <div class="subtopic">Point Cloud and Mesh
               <br/>NeRF</div>
         </td>
         <td>
@@ -566,10 +576,8 @@
       <tr class="alternate">
         <td>Wed, Nov. 17</td>
         <td class="topic">Lec. 21: 3D Labeling
-          <div class="subtopic">Lidar
-            <br>Landmark
-            <br>Frozen people
-            <br>
+          <div class="subtopic">Sensor: Lidar
+            <br>SfM: Landmark and frozen people
           </div>
         </td>
         <td>
@@ -800,13 +808,14 @@
                      <br>
 
 
-                    <p><b>3. Ask for help</b>
+                    <p><b>3. Ask for help</b> (besides office hours)
                       <div style="padding-left: 4%; margin-top: -35px">
                         <ul>
-                            <li><b>Discord:</b> In addition to the office hours, this course has a <a href="https://docs.google.com/document/d/1unjJFWahHPLU6w84o-HWX4htjH9wdJrkWdMaX6R9d-E/edit">Discord server</a>, where you can ask public questions. If
-                    you cannot make your post public (e.g., due to
-                    revealing problem set solutions), please mark your
-                    post <i>private</i>, or come to office
+                            <li><b>Lectures:</b> The lecture pdfs will be uploaded to Dropbox (follow the link) and you can ask questions there by making comments on the slides. 
+                            <li><b>Labs/Psets:</b> In addition to the office hours, this course has a <a href="https://docs.google.com/document/d/1unjJFWahHPLU6w84o-HWX4htjH9wdJrkWdMaX6R9d-E/edit">Discord server</a>, where you can ask public questions. 
+                                If you cannot make your post public (e.g., due to
+                    revealing problem set solutions), please create a room with instructors and TAs separately,
+                    or come to office
                     hours. Please note, however, that the course staff
                     cannot provide help debugging code, and there is
                     no guarantee that they'll be able to answer
@@ -817,7 +826,7 @@
                     over email, you may email the course staff, 
                     or you can contact the instructor by email
                     directly.</li>
-                    <li><b>Support:</b> The <a href="https://www.bc.edu/bc-web/offices/student-affairs/sites/counseling.html">university counseling services center</a> (CAPS) provides
+                    <li><b>Support:</b> The <a href="https://www.bc.edu/bc-web/offices/student-affairs/sites/counseling.html">university counseling services center</a> provides
                     support for a variety of issues, including mental
                     health and stress.
                     </li>
@@ -832,8 +841,7 @@
                       <div style="padding-left: 4%; margin-top: 0px">
                       Grades will be computed as follows, with all homeworks equally weighted:
                       <table style="width:20%; padding: 0 0 0 0; line-height: 8pt; margin-top: 5px">
-                        <tbody><tr class="alternate" style="border: 1px solid #dddddd"><td>Homework       </td><td align="right">50%
-                        <tbody><tr class="alternate" style="border: 1px solid #dddddd"><td>Lab       </td><td align="right">20%
+                        <tbody><tr class="alternate" style="border: 1px solid #dddddd"><td>Homework       </td><td align="right">70%
                         </td></tr><tr class="alternate" style="border: 1px solid #dddddd"><td>Final project  </td><td align="right">30%
                       </td></tr></tbody></table>
                       <ul>
@@ -847,8 +855,8 @@
                     amounts. You
                     may be asked to annotate your pdf (e.g. by selecting
                     your solution to each problem).</li>
-                          <li><b>Lab:</b> The lab materials are expected to be finished in class. We understand that sometimes you may need more time or have to miss the lab. Thus, the lab deadline is the following Monday 11:59pm.</li>
-                                            
+                          <li><b>Lab:</b> The materials are expected to be finished in class. 
+                              We will not grade labs, but it is for your own learning benefits.</li>
                           <li><b>Final project:</b> In lieu of a final exam,
                     we'll have final project. This project will be
                     completed in small groups during the last weeks of
@@ -892,11 +900,19 @@
                        encouraged to discuss homework
                       assignments with other students, <i>your
                         programming work must be completed
-                        individually</i>. You must also write up your
-                      solution on your own. You may not search for
+                        individually</i>. You may not search for
                       solutions online, or to use existing
                       implementations of the algorithms in the
-                      assignments.</li>
+                      assignments. Thus it is acceptable to learn from another student the general idea for writing program code to perform a particular task, or the technique for solving a mathematical problem, but unacceptable for two students to prepare their assignments together and submit what are essentially two copies of identical work. If you have any uncertainty about the application of this policy, please check with me.
+                      Failure to comply with these guidelines 
+                      will be considered a violation of the 
+                      <a href="https://www.bc.edu/bc-web/academics/sites/university-catalog/policies-procedures.html#academic_integrity_policies">University policies on academic integrity</a>. 
+                      Please make sure that you are familiar with these policies.
+                    </li>
+                    <li>
+                        <b>Accommodations for students with disabilities:</b>
+                        If you are a student with a documented disability seeking reasonable accommodations in this course, please contact Kathy Duggan, (617) 552-8093, <a href="mailto:dugganka@bc.edu">dugganka@bc.edu</a>, at the Connors Family Learning Center regarding learning disabilities and ADHD, or Rory Stein, (617) 552-3470, <a href="mailto:steinr@bc.edu">steinr@bc.edu</a>, in the Disability Services Office regarding all other types of disabilities, including temporary disabilities. Advance notice and appropriate documentation are required for accommodations.
+                        </li>
                     </ul>
                     </div>
                     

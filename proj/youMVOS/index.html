@@ -31,60 +31,61 @@
 	<h1>YouMVOS: An Actor-centric Multi-shot Video Object Segmentation Dataset</h1>
 
 	<div class="authors">
-	  <a href="https://donglaiw.github.io/">Donglai Wei</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  Siddhant Kharbanda<sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  Sarthak Arora<sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  Roshan Roy<sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  Nishant Jain<sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  Akash Palrecha<sup>2</sup><br/>
-	  Tanav Shah<sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  Shray Mathur<sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  Ritik Mathur<sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  Abhijay Kemka<sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  Anirudh Chakravarthy<sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="https://donglaiw.github.io/">Donglai Wei</a><sup>1&dagger;</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  Siddhant Kharbanda<sup>2&dagger;*</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  Sarthak Arora<sup>2*</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  Roshan Roy<sup>2*</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  Nishant Jain<sup>2*</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  Akash Palrecha<sup>2*</sup><br/>
+	  Tanav Shah<sup>2*</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  Shray Mathur<sup>2*</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  Ritik Mathur<sup>2*</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  Abhijay Kemka<sup>2*</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  Anirudh Chakravarthy<sup>2*</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  Zudi Lin<sup>2</sup><br/>
 	  Won-Dong Jang<sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  Yansong Tang<sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  Song Bai<sup>4</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  Yansong Tang<sup>3,4</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  Song Bai<sup>5</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  James Tompkin<sup>6</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  Philip H.S. Torr<sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  Philip H.S. Torr<sup>4</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  Hanspeter Pfister<sup>2</sup>
 	</div>
 
 	<div class="affiliations">
-	  1. Harvard University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  2. University of Southern California&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  3. University of Oxford&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-	  4. Massachusessets Institute of Technology&nbsp;&nbsp;&nbsp;&nbsp;
-	  5. Google Research
+      1. Boston College&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  2. Harvard University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      3. Tsinghua-Berkeley Shenzhen Institute<br/>
+	  4. University of Oxford&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      5. ByteDance Inc.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      6. Brown University
 	</div>
+       <div>&dagger; Equally contributed.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       * Works are done as interns at Harvard University.</div>
 
 	<div class="venue">Conference on Computer Vision and Pattern Recognition (<a href="http://cvpr2022.thecvf.com/" target="_blank">CVPR</a>) 2022 </div>
       
       </div>
       <center>
- [<a href="../../paper/2018_cvpr_aot.pdf">PDF</a>]
-[<a href="../../paper/2018_cvpr_aot_extend.pdf">PDF (extended)</a>]
-[<a href="https://github.com/donglaiw/AoT_TCAM">Torch Code</a>]
-[<a href="https://github.com/donglaiw/AoT_Dataset">Dataset and Pre-Process Code</a>]
+ [<a href="../../paper/2022_cvpr_youmvos.pdf">PDF</a>]
+[<a href="../../paper/2022_cvpr_youmvos_supp.pdf">Supplementary</a>]
+[<a href="https://github.com/donglaiw/AoT_TCAM">PyTorch code</a>]
+[<a href="https://drive.google.com/drive/folders/1XBgM-VrFfwOz7p1m5Ts2Vo81O7_qAXKy?usp=sharing">Dataset</a>]
       </center>
 <br/>    
-      <center><img src="./src/aot_teaser.png" border="0" width="80%"></center>
+      <center><img src="./src/dataset_genre.png" border="0" width="80%"></center>
 
 <div class="section abstract">
 	<h2>Abstract</h2>
 	<br>
-	<p>	&nbsp;&nbsp;&nbsp;&nbsp;We seek to understand the arrow of time in videos--what makes videos look like playing forwards or backwards?  Can we visualize the cues? Can the arrow of time be a supervisory signal useful for activity analysis? To this end, we apply a learning-based approach to a large set of videos. 
-<br/>
- &nbsp;&nbsp;&nbsp;&nbsp;To learn the arrow of time efficiently and reliably, we design a ConvNet suitable for extended temporal footprints and for the class activation visualization, and study the effect of artificial cues, such as inematographic conventions, on learning. Our trained model achieves the state-of-the-art performance on two large-scale real-world video datasets.  Through cluster analysis, we examine the learned visual cues, showing when and where they occur. Lastly, we use the trained ConvNet for two applications: self-supervision for action recognition, and video forensics -- determining whether Hollywood film clips have been deliberately reversed in time as special effects.
+	<p>	Many video understanding tasks require analyzing multi-shot videos, but existing datasets for video object segmentation (VOS) only consider single-shot videos. To address this challenge, we collected a new dataset---YouMVOS---of 200 popular YouTube videos spanning ten genres, where each video is on average five minutes long and with 75 shots. We selected recurring actors and annotated 431K segmentation masks at a frame rate of six, exceeding previous datasets in average video duration, object variation, and narrative structure complexity. We incorporated good practices of model architecture design, memory management, and multi-shot tracking into an existing video segmentation method to build competitive baseline methods. Through error analysis, we found that these baselines still fail to cope with cross-shot appearance variation on our YouMVOS dataset. Thus, our dataset poses new challenges in multi-shot segmentation towards better video analysis.
     </p>
       </div>
 
 <div class="section demo">
-	<h2>Paper Video</h2>
+	<h2>Example Video</h2>
 	<br>
 	<center>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/1zfZhXkOzCw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <!--iframe width="560" height="315" src="https://www.youtube.com/embed/1zfZhXkOzCw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe-->
 	
 	    </center>
     </div>
@@ -94,17 +95,16 @@
 <p>Bibilographic information for this work:</p>
 
 <pre class="highlight">
-@inproceedings{wei2018learning,
-  title={Learning and Using the Arrow of Time},
-  author={Wei, Donglai and Lim, Joseph J and Zisserman, Andrew and Freeman, William T},
+@inproceedings{wei2022youmvos,
+  title={YouMVOS: An Actor-centric Multi-shot Video Object Segmentation Dataset},
+  author={Wei, Donglai and Kharbanda, Siddhant and Arora, Sarthak and others},
   booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-  pages={8052--8060},
-  year={2018}
+  year={2022}
 }
 </pre>
 <h2>Acknowledgement</h2>
 <p>
-This work was supported by NSF Grant 1212849 (Reconstructive Recognition), and by the EPSRC Programme Grant Seebibyte EP/M013774/1</p>
+This work was supported by NSF grants NCS-FO-2124179, NIH grant R01HD104969, UKRI grant Turing AI Fellowship EP/W002981/1, and EPSRC/MURI grant EP/N019474/1. We also thank the Royal Academy of Engineering and FiveAI.
 </div>
 
 </div></div></body></html>

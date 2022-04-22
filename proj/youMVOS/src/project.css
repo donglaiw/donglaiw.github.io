@@ -90,7 +90,7 @@ a:active { color: #FF4B33; text-decoration: none }
 .teaser { margin: 1.5em 0; text-align: center; }
 div.content-primary .teaser p img { display: block; float: none; border: 0; margin: 4em auto 1em auto; }
 .abstract { line-height: 130%; }
-.abstract p { margin-top: 0; }
+.abstract p { margin-top: 0.5em; }
 .downloads ul { margin-top: 0.5em; }
 .list ul { margin-top: 0.5em; }
 .bibtex pre

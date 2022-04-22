@@ -67,17 +67,24 @@
       </div>
       <center>
  [<a href="../../paper/2022_cvpr_youmvos.pdf">PDF</a>]
-[<a href="../../paper/2022_cvpr_youmvos_supp.pdf">Supplementary</a>]
+ [<a href="../../paper/2022_cvpr_youmvos_supp.pdf">Supplementary</a>]
 [<a href="https://github.com/donglaiw/AoT_TCAM">PyTorch code</a>]
 [<a href="https://drive.google.com/drive/folders/1XBgM-VrFfwOz7p1m5Ts2Vo81O7_qAXKy?usp=sharing">Dataset</a>]
       </center>
 <br/>    
-      <center><img src="./src/dataset_genre.png" border="0" width="80%"></center>
+<br/>    
+      <center>
+          <img src="./src/teaser.png" border="0" width="95%">
+      </center>
+<div class="section abstract">
+          <p style="margin-top: -1em;"> Multi-shot video object segmentation (MVOS). In multi-shot videos, MVOS aims to track and segment selected
+recurring objects despite changes in appearance (e.g., person in green masks) and disconnected shots (e.g., person in red
+masks). We show sample (a) frames, (b) segmentation masks, and (c) timelines for the Gangnam Style video in our dataset.</p>
+          </div>
 
 <div class="section abstract">
 	<h2>Abstract</h2>
-	<br>
-	<p>	Many video understanding tasks require analyzing multi-shot videos, but existing datasets for video object segmentation (VOS) only consider single-shot videos. To address this challenge, we collected a new dataset---YouMVOS---of 200 popular YouTube videos spanning ten genres, where each video is on average five minutes long and with 75 shots. We selected recurring actors and annotated 431K segmentation masks at a frame rate of six, exceeding previous datasets in average video duration, object variation, and narrative structure complexity. We incorporated good practices of model architecture design, memory management, and multi-shot tracking into an existing video segmentation method to build competitive baseline methods. Through error analysis, we found that these baselines still fail to cope with cross-shot appearance variation on our YouMVOS dataset. Thus, our dataset poses new challenges in multi-shot segmentation towards better video analysis.
+    <p>	Many video understanding tasks require analyzing multi-shot videos, but existing datasets for video object segmentation (VOS) only consider single-shot videos. To address this challenge, we collected a new dataset---YouMVOS---of <b>200</b> popular YouTube videos spanning <b>ten</b> genres, where each video is on average five minutes long and with <b>75</b> shots. We selected recurring actors and annotated <b>431K</b> segmentation masks at a frame rate of six, exceeding previous datasets in average video duration, object variation, and narrative structure complexity. We incorporated good practices of model architecture design, memory management, and multi-shot tracking into an existing video segmentation method to build competitive baseline methods. Through error analysis, we found that these baselines still fail to cope with cross-shot appearance variation on our YouMVOS dataset. Thus, our dataset poses new challenges in multi-shot segmentation towards better video analysis.
     </p>
       </div>
 
@@ -85,6 +92,7 @@
 	<h2>Example Video</h2>
 	<br>
 	<center>
+      <center><img src="./src/dataset_genre.png" width="95%"></center>
       <!--iframe width="560" height="315" src="https://www.youtube.com/embed/1zfZhXkOzCw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe-->
 	
 	    </center>
@@ -94,7 +102,7 @@
 <h2>Citation</h2>
 <p>Bibilographic information for this work:</p>
 
-<pre class="highlight">
+<pre class="highlight" style="margin-top:-1.5em">
 @inproceedings{wei2022youmvos,
   title={YouMVOS: An Actor-centric Multi-shot Video Object Segmentation Dataset},
   author={Wei, Donglai and Kharbanda, Siddhant and Arora, Sarthak and others},

@@ -43,6 +43,9 @@ table.pub td img{
 table.pub td.topic_sci {
     background-color: #FDFFC8;
 }
+table.pub td.topic_data {
+    background-color: #C8E9FF;
+}
 #hd{text-align:center; margin-bottom:10px;}
 #hd p.slogan{color:#2a5a7a;font-size:1.2em;text-align:center;margin-bottom:20px;}
 #hd .headerimage {overflow:hidden;}

@@ -21,7 +21,19 @@
 			margin-right: 30px;
 			border: 0 solid black;
 			float: left;
-			margin-bottom: 0;
+			margin-bottom: 0;			
+		}
+		.paper-tag {
+			background-color: #eee;
+			padding: 1px 1px;
+			margin-left: 0px;
+			border-radius: 4px;
+			font-size: 90%;
+			text-decoration: none;
+			color: #333;
+			}
+		.paper-tag:hover {
+			background-color: #ddd;
 		}
 	</style>
 	<script type="text/javascript" src="js/jwplayer/jwplayer.js"></script>
@@ -102,11 +114,11 @@
 				</table>
 			</div>
 		</div>
-		<h4>My group advances AI4Neuroscience by developing foundation models for large-scale <b>biomedical image
+		<h4>My group advances <b>AI4Neuroscience</b> by developing foundation models for large-scale <b>biomedical image
 				analysis</b> and investigating <b>causal mechanisms</b> in complex systems.
 			Our research is generously supported by NSF CAREER Award ('23) and NIH-R01 ('23).
 			<br /><br />
-			I began my <b>AI4Neuroscience</b> journey during memorable postdoc years at Harvard University, working with
+			I spent memorable postdoc years at Harvard University, working with
 			<a href="https://vcg.seas.harvard.edu/people">Hanspeter Pfister</a> and
 			<a href="https://lichtmanlab.fas.harvard.edu/people/jeff-lichtman">Jeff Lichtman</a>.
 			I was fortunate to be advised by <a href="http://billf.mit.edu/">William Freeman</a> during my Ph.D.
@@ -128,30 +140,30 @@
 				<h4>
 					<b>Geometry-Informed ML</b>: Incorporating geometric priors for better generalization
 					<ul>
-						<li>&nbsp;&nbsp;- Shape Representation: MedIA<a
-								href="https://www.sciencedirect.com/science/article/abs/pii/S1361841524002925?via%3DDihub">'25</a>,
-							MICCAI<a href="https://donglaiw.github.io/paper/2023_miccai_sdt.pdf">'23</a>,
-							ISBI<a href="https://donglaiw.github.io/paper/2023_isbi_vqseg.pdf">'23</a>,
-							CVPR<a href="https://donglaiw.github.io/paper/2019_cvpr_skel.pdf">'19</a>,<a
-								href="https://donglaiw.github.io/paper/2020_cvpr_super_bpd.pdf">'20</a>
+						<li>&nbsp;&nbsp;- Shape Representation: 
+							<a href="https://www.sciencedirect.com/science/article/abs/pii/S1361841524002925?via%3DDihub" class="paper-tag">MedIA'25</a>
+							<a href="https://donglaiw.github.io/paper/2023_miccai_sdt.pdf"  class="paper-tag">MICCAI'23</a>
+							<a href="https://donglaiw.github.io/paper/2023_isbi_vqseg.pdf" class="paper-tag">ISBI'23</a>
+							<a href="https://donglaiw.github.io/paper/2020_cvpr_super_bpd.pdf" class="paper-tag">CVPR'20</a>
+							<a href="https://donglaiw.github.io/paper/2019_cvpr_skel.pdf" class="paper-tag">CVPR'19</a>							
 						</li>
-						<li>&nbsp;&nbsp;- Invariance: <a href="">axiv'25</a></li>
+						<li>&nbsp;&nbsp;- Invariance: <a href="https://arxiv.org/html/2404.14435v1" class="paper-tag">arXiv'24</a></li>
 					</ul>
 
-					<br /><b>Biomedical Benchmarks</b>: Identifying bottlenecks for robust modeling
+					<br /><b>Biomedical Benchmarks</b>: Identifying bottlenecks for model development
 					<ul>
 						<li>&nbsp;&nbsp;- Image Registration: Alignment (<a
-								href="https://rnr-exm.grand-challenge.org/">RnR-ExM</a>), Stitching (<a
-								href="">Mosaick-EM</a>)</li>
+								href="https://rnr-exm.grand-challenge.org/">RnR-ExM</a>)</li>  <!--, Stitching (<a
+								href="">Mosaick-EM</a>)-->
 						<li>&nbsp;&nbsp;- Segmentation:
 							<ul>
-								<li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = Coarse: Blood Vessel (<a
+								<li> &nbsp;&nbsp;&nbsp;&nbsp; = Low-Res: Blood Vessel (<a
 										href="https://bossdb.org/project/wan2024">BvEM</a>), Nuclei (<a
 										href="https://nucmm.grand-challenge.org/">NucMM</a>, <a
 										href="https://pytorchconnectomics.github.io/datasets/proj/CySGAN/index.html">NucExM</a>,
 									<a href="https://github.com/focolab/WormND">WormID-bench</a>)
 								</li>
-								<li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = Fine: Neuron (<a
+								<li> &nbsp;&nbsp;&nbsp;&nbsp; = High-Res: Neuron (<a
 										href="https://axonem.grand-challenge.org/">AxonEM</a>), Synapse (<a
 										href="https://codalab.lisn.upsaclay.fr/competitions/9169">WASPSYN</a>, <a
 										href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123630103.pdf">EM-R50</a>),
@@ -161,28 +173,28 @@
 								href="https://github.com/M3DV/RibSeg">RibSeg</a>, <a
 								href="https://github.com/M3DV/RibFrac-Challenge">RibFrac</a>), Lung (<a
 								href='https://github.com/M3DV/pulmonary-tree-labeling'>PTL</a>) </li>
-						<li>&nbsp;&nbsp;- Packages: BiaPy (<a href="https://biapyx.github.io/">Nature Methods'25</a>),
+						<li>&nbsp;&nbsp;- Packages: BiaPy (<a href="https://biapyx.github.io/"  class="paper-tag">Nature Methods'25</a>),
 							PytorchConnectomics (<a
-								href="https://github.com/zudi-lin/pytorch_connectomics">arXiv'21</a>)</li>
+								href="https://github.com/zudi-lin/pytorch_connectomics"  class="paper-tag">arXiv'21</a>)</li>
 					</ul>
 
 					<br /><b>Neuroscience Advancement</b>: Extracting insights from visual measurements
 					<ul>
-						<li>&nbsp;&nbsp;- Connectomics: <a
-								href="https://www.science.org/doi/10.1126/science.adk4858">Science'24</a>, <a
-								href="https://www.nature.com/articles/s41467-024-50411-z">Nature Comm.'24</a>, <a
-								href="https://www.nature.com/articles/s41592-023-01936-6">Nature Methods'23</a></li>
-						<li>&nbsp;&nbsp;- Spatial Transcriptomics: <a href="">Nature Comm.'24</a></li>
-						<li>&nbsp;&nbsp;- Neural Dynamics: <a href="https://arxiv.org/abs/2308.06578">arXiv'24</a></li>
+						<li>&nbsp;&nbsp;- Connectomics: 
+							<a href="https://www.science.org/doi/10.1126/science.adk4858" class="paper-tag">Science'24</a>
+								<a href="https://www.nature.com/articles/s41467-024-50411-z" class="paper-tag">Nature Comm.'24</a>
+								<a href="https://www.nature.com/articles/s41592-023-01936-6" class="paper-tag">Nature Methods'23</a></li>
+						<li>&nbsp;&nbsp;- Spatial Transcriptomics: <a href="https://www.nature.com/articles/s41467-024-53729-w" class="paper-tag">Nature Comm.'24</a></li>
+						<li>&nbsp;&nbsp;- Neural Dynamics: <a href="https://arxiv.org/abs/2308.06578" class="paper-tag">arXiv'24</a></li>
 					</ul>
 					<br /><b>Causal Modeling</b>: Analyzing latent temporal structures
 					<ul>
-						<li>&nbsp;&nbsp;- Arrow of Time: CVPR<a
-								href="http://www.robots.ox.ac.uk/~vgg/research/arrow/">'14</a>,<a
-								href="https://donglaiw.github.io/paper/2018_cvpr_aot.pdf">'18</a></li>
-						<li>&nbsp;&nbsp;- Video Dynamics: ICLR<a
-								href="https://donglaiw.github.io/paper/2024_iclr_llcp.pdf">'24</a>, ICML<a
-								href="https://donglaiw.github.io/paper/2024_icml_cdtd.pdf">'24</a></li>
+						<li>&nbsp;&nbsp;- Arrow of Time: 
+							<a href="https://donglaiw.github.io/paper/2018_cvpr_aot.pdf" class="paper-tag">CVPR'18</a>
+							<a href="http://www.robots.ox.ac.uk/~vgg/research/arrow/" class="paper-tag">CVPR'14</a>	</li>						
+						<li>&nbsp;&nbsp;- Video Dynamics:
+							<a href="https://donglaiw.github.io/paper/2024_iclr_llcp.pdf" class="paper-tag">ICLR'24</a>
+							<a href="https://donglaiw.github.io/paper/2024_icml_cdtd.pdf" class="paper-tag">ICML'24</a></li>
 					</ul>
 				</h4>
 			</div>

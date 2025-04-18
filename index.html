@@ -30,11 +30,45 @@
 			border-radius: 4px;
 			font-size: 90%;
 			text-decoration: none;
-			color: #333;
 			}
 		.paper-tag:hover {
 			background-color: #ddd;
 		}
+		.ns-tag {
+			background-color: #FDFFC8;
+			padding: 1px 1px;
+			margin-left: 0px;
+			border-radius: 4px;
+			font-size: 90%;
+			text-decoration: none;
+			}
+		.ns-tag:hover {
+			background-color: #F3F5A2;
+		}
+		.data-tag {
+			background-color: #C8E9FF;
+			padding: 1px 1px;
+			margin-left: 0px;
+			border-radius: 4px;
+			font-size: 90%;
+			text-decoration: none;
+			}
+		.data-tag:hover {
+			background-color: #99D3F5;
+		}
+		.casual-tag {
+			background-color: #C8E6C9;
+			padding: 1px 1px;
+			margin-left: 0px;
+			border-radius: 4px;
+			font-size: 90%;
+			text-decoration: none;
+			}
+		.casual-tag:hover {
+			background-color: #A5D6A7;
+		}
+
+
 	</style>
 	<script type="text/javascript" src="js/jwplayer/jwplayer.js"></script>
 	<script src="js/jwplayer/swfobject.js" type="text/javascript"></script>
@@ -129,7 +163,7 @@
 				href="http://www.dam.brown.edu/people/geman/">Stuart Geman</a>, and <a
 				href="https://vivo.brown.edu/display/sying">See-Chen Ying</a>.
 			<br /><br />
-			<font style="color:#D2300E"><b>Now Looking For:</b></font> postdocs, visiting scholars and research interns.
+			<font style="color:#e65100"><b>Now Looking For:</b></font> postdocs, visiting scholars and research interns.
 			</font>
 		</h4>
 
@@ -140,61 +174,61 @@
 				<h4>
 					<b>Geometry-Informed ML</b>: Incorporating geometric priors for better generalization
 					<ul>
-						<li>&nbsp;&nbsp;- Shape Representation: 
+						<li>- Shape Representation: 
 							<a href="https://www.sciencedirect.com/science/article/abs/pii/S1361841524002925?via%3DDihub" class="paper-tag">MedIA'25</a>
 							<a href="https://donglaiw.github.io/paper/2023_miccai_sdt.pdf"  class="paper-tag">MICCAI'23</a>
 							<a href="https://donglaiw.github.io/paper/2023_isbi_vqseg.pdf" class="paper-tag">ISBI'23</a>
 							<a href="https://donglaiw.github.io/paper/2020_cvpr_super_bpd.pdf" class="paper-tag">CVPR'20</a>
 							<a href="https://donglaiw.github.io/paper/2019_cvpr_skel.pdf" class="paper-tag">CVPR'19</a>							
 						</li>
-						<li>&nbsp;&nbsp;- Invariance: <a href="https://arxiv.org/html/2404.14435v1" class="paper-tag">arXiv'24</a></li>
+						<li>- Invariance: <a href="https://arxiv.org/html/2404.14435v1" class="paper-tag">arXiv'24</a></li>
 					</ul>
 
 					<br /><b>Biomedical Benchmarks</b>: Identifying bottlenecks for model development
 					<ul>
-						<li>&nbsp;&nbsp;- Image Registration: Alignment (<a
-								href="https://rnr-exm.grand-challenge.org/">RnR-ExM</a>)</li>  <!--, Stitching (<a
+						<li>- Image Registration: Alignment (<a
+								href="https://rnr-exm.grand-challenge.org/" class="data-tag">RnR-ExM</a>)</li>  <!--, Stitching (<a
 								href="">Mosaick-EM</a>)-->
-						<li>&nbsp;&nbsp;- Segmentation:
+						<li>- Segmentation:
 							<ul>
-								<li> &nbsp;&nbsp;&nbsp;&nbsp; = Low-Res: Blood Vessel (<a
-										href="https://bossdb.org/project/wan2024">BvEM</a>), Nuclei (<a
-										href="https://nucmm.grand-challenge.org/">NucMM</a>, <a
-										href="https://pytorchconnectomics.github.io/datasets/proj/CySGAN/index.html">NucExM</a>,
-									<a href="https://github.com/focolab/WormND">WormID-bench</a>)
+								<li>= Low-Res: Blood Vessel (<a
+										href="https://bossdb.org/project/wan2024" class="data-tag">BvEM</a>), Nuclei (<a
+										href="https://nucmm.grand-challenge.org/" class="data-tag">NucMM</a>, <a
+										href="https://pytorchconnectomics.github.io/datasets/proj/CySGAN/index.html" class="data-tag">NucExM</a>,
+									<a href="https://github.com/focolab/WormND" class="data-tag">WormID-bench</a>)
 								</li>
-								<li> &nbsp;&nbsp;&nbsp;&nbsp; = High-Res: Neuron (<a
-                                                                                          href="https://axonem.grand-challenge.org/">AxonEM</a>, <a href="https://huggingface.co/datasets/pytc/DenSpine">DenSpineEM</a>), Synapse (<a
-										href="https://codalab.lisn.upsaclay.fr/competitions/9169">WASPSYN</a>, <a
-										href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123630103.pdf">EM-R50</a>),
-									Organelle (<a href="https://mitoem.grand-challenge.org/">MitoEM</a>)</li>
+								<li>= High-Res: Neuron (<a
+                                                                                          href="https://axonem.grand-challenge.org/" class="data-tag">AxonEM</a>, <a href="https://huggingface.co/datasets/pytc/DenSpine" class="data-tag">DenSpineEM</a>), Synapse (<a
+										href="https://codalab.lisn.upsaclay.fr/competitions/9169" class="data-tag">WASPSYN</a>, <a
+										href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123630103.pdf" class="data-tag">EM-R50</a>),
+									Organelle (<a href="https://mitoem.grand-challenge.org/" class="data-tag">MitoEM</a>)</li>
 							</ul>
-						<li>&nbsp;&nbsp;- Medical: General (<a href="https://medmnist.com/">MedMNIST</a>), Rib (<a
-								href="https://github.com/M3DV/RibSeg">RibSeg</a>, <a
-								href="https://github.com/M3DV/RibFrac-Challenge">RibFrac</a>), Lung (<a
-								href='https://github.com/M3DV/pulmonary-tree-labeling'>PTL</a>) </li>
-						<li>&nbsp;&nbsp;- Packages: BiaPy (<a href="https://biapyx.github.io/"  class="paper-tag">Nature Methods'25</a>),
+						<li>- Medical: General (<a href="https://medmnist.com/" class="data-tag">MedMNIST</a>), Rib (<a
+								href="https://github.com/M3DV/RibSeg" class="data-tag">RibSeg</a>, <a
+								href="https://github.com/M3DV/RibFrac-Challenge" class="data-tag">RibFrac</a>), Lung (<a
+								href='https://github.com/M3DV/pulmonary-tree-labeling' class="data-tag">PTL</a>) </li>
+						<li>- Packages: BiaPy (<a href="https://biapyx.github.io/"  class="data-tag">Nature Methods'25</a>),
 							PytorchConnectomics (<a
-								href="https://github.com/zudi-lin/pytorch_connectomics"  class="paper-tag">arXiv'21</a>)</li>
+								href="https://github.com/zudi-lin/pytorch_connectomics"  class="data-tag">arXiv'21</a>)</li>
 					</ul>
 
 					<br /><b>Neuroscience Advancement</b>: Extracting insights from visual measurements
 					<ul>
-						<li>&nbsp;&nbsp;- Connectomics: 
-							<a href="https://www.science.org/doi/10.1126/science.adk4858" class="paper-tag">Science'24</a>
-								<a href="https://www.nature.com/articles/s41467-024-50411-z" class="paper-tag">Nature Comm.'24</a>
-								<a href="https://www.nature.com/articles/s41592-023-01936-6" class="paper-tag">Nature Methods'23</a></li>
-						<li>&nbsp;&nbsp;- Spatial Transcriptomics: <a href="https://www.nature.com/articles/s41467-024-53729-w" class="paper-tag">Nature Comm.'24</a></li>
-						<li>&nbsp;&nbsp;- Neural Dynamics: <a href="https://arxiv.org/abs/2308.06578" class="paper-tag">arXiv'24</a></li>
+						<li>- Connectomics: 
+							<a href="https://www.science.org/doi/10.1126/science.adk4858" class="ns-tag">Science'24</a>
+								<a href="https://www.nature.com/articles/s41467-024-50411-z" class="ns-tag">Nature Comm.'24</a>
+								<a href="https://www.nature.com/articles/s41592-023-01936-6" class="ns-tag">Nature Methods'23</a></li>
+						<li>- Spatial Transcriptomics: <a href="https://www.nature.com/articles/s41467-024-53729-w" class="ns-tag">Nature Comm.'24</a></li>
+						<li>- Systems: <a href="https://arxiv.org/abs/2308.06578" class="ns-tag">arXiv'24</a></li>
 					</ul>
 					<br /><b>Causal Modeling</b>: Analyzing latent temporal structures
 					<ul>
-						<li>&nbsp;&nbsp;- Arrow of Time: 
-							<a href="https://donglaiw.github.io/paper/2018_cvpr_aot.pdf" class="paper-tag">CVPR'18</a>
-							<a href="http://www.robots.ox.ac.uk/~vgg/research/arrow/" class="paper-tag">CVPR'14</a>	</li>						
-						<li>&nbsp;&nbsp;- Video Dynamics:
-							<a href="https://donglaiw.github.io/paper/2024_iclr_llcp.pdf" class="paper-tag">ICLR'24</a>
-							<a href="https://donglaiw.github.io/paper/2024_icml_cdtd.pdf" class="paper-tag">ICML'24</a></li>
+						<li>- Arrow of Time: 
+							<a href="https://donglaiw.github.io/paper/2018_cvpr_aot.pdf" class="casual-tag">CVPR'18</a>
+							<a href="http://www.robots.ox.ac.uk/~vgg/research/arrow/" class="casual-tag">CVPR'14</a>	</li>						
+						<li>- Video Dynamics:
+							<a href="https://donglaiw.github.io/paper/2024_iclr_llcp.pdf" class="casual-tag">ICLR'24</a>
+							<a href="https://donglaiw.github.io/paper/2024_icml_cdtd.pdf" class="casual-tag">ICML'24</a></li>
 					</ul>
 				</h4>
 			</div>
@@ -313,8 +347,9 @@
 
 		<!--p> natural image -> biomedical image -> applications<p-->
 		<h2>Publications [<font style="font-size:0.7em">AI</font>, <font
+				style="background-color:#C8E9FF;font-size:0.7em">Dataset</font>, <font
 				style="background-color:#FDFFC8;font-size:0.7em">Neuroscience</font>, <font
-				style="background-color:#C8E9FF;font-size:0.7em">Dataset</font>]</h2>
+				style="background-color:#C8E6C9;font-size:0.7em">Causal</font>]</h2>
 		<table border=0 class='pub'>
 			<tr>
 				<td>
@@ -485,7 +520,7 @@
 
 			<tr>
 				<td width=30%><img height=150 width=65% src="teaser/2024_icml_cdtd.png" /></td>
-				<td>
+				<td class="topic_cas">
 					<h3><a href="https://proceedings.mlr.press/v235/li24h.html">Learning Causal Domain-Invariant
 							Temporal Dynamics for Few-Shot Action Recognition</a>
 					</h3>
@@ -497,7 +532,7 @@
 			</tr>
 			<tr>
 				<td width=30%><img height=120 width=70% src="teaser/2024_iclr_llcp.png" /></td>
-				<td>
+				<td class="topic_cas">
 					<h3><a href="https://openreview.net/pdf?id=Cu5wJa5LGO">LLCP: Learning Latent Causal Processes for
 							Reasoning-based Video Question Answer</a>
 					</h3>
@@ -1431,7 +1466,7 @@
 			</tr>
 			<tr>
 				<td width=30%><img height=160 width=70% src="teaser/2018_cvpr_aot_v2.png" /></td>
-				<td>
+				<td class="topic_cas">
 					<h3><a href="paper/2018_cvpr_aot.pdf">Learning and Using the Arrow of Time</a></h3>
 					<h4><b>Donglai Wei</b>, Joseph Lim, Andrew Zisserman, Wlliam T. Freeman<br>
 						<em>CVPR 2018</em><br><span class="links"><a href="proj/learnAoT/index.html">[Website
@@ -1547,7 +1582,7 @@
 
 			<tr>
 				<td width=30%><img height=150 width=70% src="teaser/2014_cvpr_aot.png" /></td>
-				<td>
+				<td class="topic_cas">
 					<h3><a href="paper/2014_cvpr_aot.pdf">Seeing the Arrow of Time</a></h3>
 					<h4>Lindsey Pickup, Zheng Pan, <b>Donglai Wei</b>, Yichang Shih, Changshui Zhang, Andrew Zisserman,
 						Bernhard Sch&ouml;lkopf, William T. Freeman<br>
